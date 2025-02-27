@@ -28,7 +28,7 @@ const Breadcrumb = ({
                   <li className="flex items-center">
                     <Link
                       href="/"
-                      className="pr-1 text-base font-medium text-body-color hover:text-primary"
+                      className="pr-1 text-base font-medium text-body-color hover:text-red-500"
                     >
                       Home
                     </Link>

@@ -57,16 +57,17 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/logo-1.png"
-                  alt="logo"
-                  width={140}
-                  height={30}
-                  className="w-full dark:hidden"
-                />
+  src="/images/logo/logo-1.png"
+  alt="logo"
+  width={140}
+  height={30}
+  className="w-full dark:hidden transparent-logo"
+/>
+               
                 <Image
                   src="/images/logo/logo-1.png"
                   alt="logo"
-                  width={140}
+                  width={120}
                   height={30}
                   className="hidden w-full dark:block"
                 />
@@ -113,7 +114,7 @@ const Header = () => {
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
-                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-red-500"
                             }`}
                           >
                             {menuItem.title}
