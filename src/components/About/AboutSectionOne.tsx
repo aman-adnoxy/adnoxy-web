@@ -9,9 +9,9 @@ const checkIcon = (
 
 const AboutSectionOne = () => {
   const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-red-600">
-  <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-red-200 text-red-600">
-    {checkIcon}
+    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
+    <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
+      {checkIcon}
   </span>
   {text}
 </p>
@@ -20,14 +20,14 @@ const AboutSectionOne = () => {
   return (
     <section id="about" className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
-      <div className="border-b border-black pb-16 dark:border-red-600 md:pb-20 lg:pb-28">
+      <div className="border-b border-black pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
 
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Bridging the Gap Between Online Ads and In-Store Impact—Experience the Future of Advertising Today!"
+                title="Bridging The Gap Between Online Ads and In-Store Impact—Experience the Future of Advertising Today!"
                 paragraph="We help brands capture consumer attention through customized in-store advertising solutions, placing your brand at high-impact locations where purchasing decisions are made."
-                mb="44px"
+                mb="44px" 
 
                
               />
@@ -48,7 +48,12 @@ const AboutSectionOne = () => {
                   fill
                   className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
                 />
-               
+               <Image
+                  src="/images/about/image.png"
+                  alt="about-image"
+                  fill
+                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
+                />
               </div>
             </div>
             
