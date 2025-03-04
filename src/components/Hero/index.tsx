@@ -11,9 +11,9 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
-              <h2 className="mb-5 text-3xl font-bold leading-tight text-red-600 dark:text-red-600 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+              <h1 className="mb-5 text-3xl font-bold leading-tight text-red-600 dark:text-red-600 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight font-serif">
   INNOVATING OFFLINE FASHION ADS AND MORE..
-</h2>
+</h1>
 
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                 Bridging the Gap Between Online Ads and In-Store Impact—Experience the Future of Advertising Today!

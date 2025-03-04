@@ -13,7 +13,9 @@ const blogData: Blog[] = [
       designation: "Graphic Designer",
     },
     tags: ["Fashion"],
+    
     publishDate: "2025",
+    
   },
   {
     id: 2,
