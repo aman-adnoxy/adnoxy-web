@@ -18,8 +18,8 @@ export const metadata: Metadata = {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-                  Experience the Future of Advertising – Partner with Us Today!
+              <h2 className="mb-5 text-3xl font-bold leading-tight text-red-600 dark:text-red-600 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight font-serif">
+              Experience the Future of Advertising – Partner with Us Today!
                 </h2>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
                           <Image
-                            src=""
+                            src="/images/blog/author-011.jpg"
                             alt="author"
                             fill
                           />
@@ -117,7 +117,7 @@ export const metadata: Metadata = {
                   </div>
                   <p className="mb-8 text-base font-medium leading-relaxed text-gray-500 sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
 In a time when algorithms dictate our digital lives, offline storytelling offers a welcome respite. It brings us back to human connection, allowing us to experience fashion on a personal, tangible level. It’s no longer just about showcasing products—it’s about forging emotional bonds, sparking memories, and building brand loyalty through memorable, immersive experiences that linger long after the moment ends. <strong className="text-primary dark:text-white">
-                      malesuada
+                      
                     </strong>
                     </p>
                   <p className="mb-8 text-base font-medium leading-relaxed text-black sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
