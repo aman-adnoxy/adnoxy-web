@@ -20,7 +20,7 @@ export const metadata: Metadata = {
               <div>
               <h2 className="mb-5 text-3xl font-bold leading-tight text-red-600 dark:text-red-600 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight font-serif">
               Experience the Future of Advertising – Partner with Us Today!
-               </h2>
+                </h2>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
                     <div className="mb-5 mr-10 flex items-center">
