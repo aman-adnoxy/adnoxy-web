@@ -3,8 +3,39 @@
 import Image from "next/image";
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
-
 import ModalVideo from "react-modal-video";
+
+const VideoPlayer = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div>
+      <button
+        onClick={() => setIsOpen(true)}
+        className="mt-4 rounded bg-red-600 px-4 py-2 text-white hover:bg-red-700"
+      >
+        Play Local Video
+      </button>
+
+      {isOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75">
+          <div className="relative">
+            <video width="640" height="360" controls autoPlay>
+              <source src="/images/video/myvideo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute -top-4 -right-4 bg-red-500 px-2 py-1 text-white rounded-full"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
@@ -28,12 +59,8 @@ const Video = () => {
               <div className="relative aspect-[77/40] items-center justify-center">
                 <Image src="/images/video/video.jpg" alt="video image" fill />
                 <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
-                  <button
-                    aria-label="video play button"
-                    onClick={() => setOpen(true)}
-                    className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-white bg-opacity-75 text-primary transition hover:bg-opacity-100"
-                  >
-                    <svg
+                  <button>
+                    <svg 
                       width="16"
                       height="18"
                       viewBox="0 0 16 18"
@@ -47,16 +74,10 @@ const Video = () => {
             </div>
           </div>
         </div>
-      </div>
 
-      <ModalVideo
-        channel="youtube"
-        autoplay={true}
-        start={true}
-        isOpen={isOpen}
-        videoId="L61p2uyiMSo"
-        onClose={() => setOpen(false)}
-      />
+        {/* Button to play local video */}
+        <VideoPlayer />
+      </div>
 
       <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div>
     </section>
