@@ -40,13 +40,14 @@ const Header = () => {
 
   return (
     <>
-     <header
+   <header
   className={`header left-0 top-0 z-40 flex w-full items-center ${
     sticky
       ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
       : "absolute bg-transparent"
-  } text-red-500`}
+  } text-[#a31d1d]`}
 >
+
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
             <div className="w-60 max-w-full px-4 xl:mr-12">
@@ -110,15 +111,16 @@ const Header = () => {
                       <li key={index} className="group relative">
                         {menuItem.path ? (
                           <Link
-                            href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
-                              usePathName === menuItem.path
-                                ? "text-primary dark:text-white"
-                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-red-500"
-                            }`}
-                          >
-                            {menuItem.title}
-                          </Link>
+                          href={menuItem.path}
+                          className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                            usePathName === menuItem.path
+                              ? "text-[#a31d1d] dark:text-white"
+                              : "text-dark hover:text-[#a31d1d] dark:text-white/70 dark:hover:text-[#a31d1d]"
+                          }`}
+                        >
+                          {menuItem.title}
+                        </Link>
+                        
                         ) : (
                           <>
                             <p
@@ -162,7 +164,7 @@ const Header = () => {
               <div className="flex items-center justify-end pr-16 lg:pr-0">
               <Link
   href="/signin"
-  className="hidden px-7 py-3 text-base font-medium text-gray-500 hover:text-red-500 dark:text-gray-500 dark:hover:text-red-500 md:block"
+  className="hidden px-7 py-3 text-base font-medium text-gray-500 hover:text-[#a31d1d] dark:text-gray-500 dark:hover:text-[#a31d1d] md:block"
 >
   Sign In
 </Link>

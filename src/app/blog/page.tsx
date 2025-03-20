@@ -36,53 +36,54 @@ const Blog = () => {
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-red-500 transition hover:bg-red hover:bg-red-500 hover:text-white"
-                  >
+                    className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-[#a31d1d] transition hover:bg-[#a31d1d] hover:text-white"
+ >
                     Prev
                   </a>
                 </li>
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-red-500 transition hover:bg-red-500 hover:bg-opacity-100 hover:text-white"
-                  >
+                    className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-[#a31d1d] transition hover:bg-[#a31d1d] hover:text-white"
+                    >
                     1
                   </a>
                 </li>
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-red-500 transition hover:bg-red-500 hover:bg-opacity-100 hover:text-white"
-                  >
+                    className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-[#a31d1d] transition hover:bg-[#a31d1d] hover:text-white"
+  >
                     2
                   </a>
                 </li>
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-red-500 transition hover:bg-red-500 hover:bg-opacity-100 hover:text-white"
-                  >
+                    className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-[#a31d1d] transition hover:bg-[#a31d1d] hover:text-white"
+                    >
                     3
                   </a>
                 </li>
                 <li className="mx-1">
-                  <span className="flex h-9 min-w-[36px] cursor-not-allowed items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-red-500 transition hover:bg-red-500 hover:bg-red-500 hover:text-white">
+                  <span className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-[#a31d1d] transition hover:bg-[#a31d1d] hover:text-white"
+                  >
                     ...
                   </span>
                 </li>
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-red-500 transition hover:bg-primary hover:bg-red-500 hover:text-white"
-                  >
+                    className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-[#a31d1d] transition hover:bg-[#a31d1d] hover:text-white"
+                    >
                     12
                   </a>
                 </li>
                 <li className="mx-1">
                   <a
                     href="#0"
-                    className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-red-500 transition hover:bg-primary hover:bg-red-500 hover:text-white"
-                  >
+                    className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-[#a31d1d] transition hover:bg-[#a31d1d] hover:text-white"
+ >
                     Next
                   </a>
                 </li>
