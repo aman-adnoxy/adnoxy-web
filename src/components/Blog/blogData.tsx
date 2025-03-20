@@ -14,6 +14,8 @@ const blogData: Blog[] = [
     },
     tags: ["Fashion"],
     
+
+    
     publishDate: "2025",
     
   },

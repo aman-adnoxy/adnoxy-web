@@ -95,7 +95,7 @@ export const metadata: Metadata = {
                   <div className="mb-5">
                     <a
                       href="#0"
-                      className="inline-flex items-center justify-center rounded-full bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-500"
+                      className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-[#a31d1d] transition hover:bg-[#a31d1d] hover:text-white"
                       >
                       Fashion
                     </a>

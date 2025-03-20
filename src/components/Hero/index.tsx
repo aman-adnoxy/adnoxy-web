@@ -11,9 +11,10 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
-              <h1 className="mb-5 text-3xl font-bold leading-tight text-red-600 dark:text-red-600 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight font-serif">
+              <h1 className="mb-5 text-3xl font-bold leading-tight text-[#a31d1d] dark:text-[#a31d1d] sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight font-serif">
   INNOVATING OFFLINE FASHION ADS AND MORE..
 </h1>
+
 
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
                 Bridging the Gap Between Online Ads and In-Store Impact—Experience the Future of Advertising Today!
@@ -21,8 +22,8 @@ const Hero = () => {
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
                     href="https://nextjstemplates.com/templates/saas-starter-startup"
-                    className="inline-block rounded-full bg-red-500 px-6 py-2 text-base font-semibold text-white duration-300 ease-in-out hover:bg-red-500 dark:bg-red-500 dark:text-white dark:hover:bg-white/5"
- >
+                    className="inline-block rounded-full bg-[#a31d1d] px-6 py-2 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#a31d1d] dark:bg-[#a31d1d] dark:text-white dark:hover:bg-white/5"
+                    >
                    {/* 🔥 Get Pro
                   </Link>
                   <Link

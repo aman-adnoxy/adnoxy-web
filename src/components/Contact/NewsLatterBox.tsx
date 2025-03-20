@@ -26,11 +26,12 @@ const NewsLatterBox = () => {
           placeholder="Enter your email"
           className="border-stroke mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
         />
-       <input
+      <input
   type="submit"
   value="Subscribe"
-  className="mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-red-600 px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-red-500 dark:shadow-submit-dark"
+  className="mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-[#a31d1d] px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-[#921818] dark:shadow-submit-dark"
 />
+
 
         <p className="text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
           No spam guaranteed, So please don’t send any spam mail.
