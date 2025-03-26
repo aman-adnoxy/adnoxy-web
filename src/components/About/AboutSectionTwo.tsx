@@ -9,23 +9,24 @@ const AboutSectionTwo = () => {
         <div className="-mx-4 flex flex-wrap items-center">
           {/* Left Side Image */}
           <div className="w-full px-4 lg:w-1/2">
-            <div className="relative mx-auto mb-12 aspect-[25/24] max-w-[500px] text-center lg:m-0" data-wow-delay=".15s">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
+            <div className="relative mx-auto mb-12 max-w-[500px] text-center lg:m-0" data-wow-delay=".15s">
+              <div className="relative mx-auto max-w-[500px] lg:mr-0">
                 <Image
                   src="/images/about/image2.png"
                   alt="about-image"
-                  layout="fill"
-                  objectFit="cover" // Ensures proper rendering
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+                  width={500} // Adjusts according to text size
+                  height={450} // Maintains aspect ratio
+                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0 object-cover"
+                  priority
                 />
-<Image
-                src="/images/about/image2.png"
-                alt="about image"
-                fill
-                className="hidden drop-shadow-three dark:block dark:drop-shadow-none"
-              />
-
-
+                <Image
+                  src="/images/about/image2.png"
+                  alt="about image"
+                  width={500}
+                  height={450}
+                  className="hidden drop-shadow-three dark:block dark:drop-shadow-none object-cover"
+                  priority
+                />
               </div>
             </div>
           </div>
@@ -62,11 +63,11 @@ const AboutSectionTwo = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
   );
 };
-
 export default AboutSectionTwo;
 
