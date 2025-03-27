@@ -62,7 +62,7 @@ const Header = () => {
   alt="logo"
   width={140}
   height={30}
-  className="w-full dark:hidden transparent-logo"
+  className="w-full dark:hidden transparent-logo scale-75"
 />
                
                 <Image
@@ -168,9 +168,9 @@ const Header = () => {
 >
   Sign In
 </Link>
-                <div>
+                {/* <div>
                   <ThemeToggler />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

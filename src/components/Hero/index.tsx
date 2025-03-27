@@ -6,39 +6,52 @@ const Hero = () => {
       <section
         id="home"
         className="relative z-10 overflow-hidden bg-[#ffffff] pb-16 pt-[120px] dark:bg-[#000000] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
- >
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap">
+        style={{ height: "100vh" }}
+      >
+        <div className="container flex h-[70vh]">
+          <div className="mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="mx-auto max-w-[800px] text-center">
-              <h1 className="mb-5 text-3xl font-bold leading-tight text-[#a31d1d] dark:text-[#a31d1d] sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight font-serif">
+              <div className="mx-auto max-w-[800px]">
+              <h1 className="mb-5 lg:text-[4rem] md:text-[3rem] sm:text-[2.5rem] text-[2rem] font-bold leading-tight text-[#a31d1d] sm:leading-tight md:leading-tight font-[Plus Jakarta Sans]">
   INNOVATING OFFLINE FASHION ADS AND MORE..
 </h1>
 
 
-                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                <p className="mb-12 max-w-lg m:text-md md:text-lg font-[Poppins]">
                 Bridging the Gap Between Online Ads and In-Store Impact—Experience the Future of Advertising Today!
                 </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                <div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
-                    href="https://nextjstemplates.com/templates/saas-starter-startup"
+                    href="https://forms.gle/zW4584QMNMkerPREA"
                     className="inline-block rounded-full bg-[#a31d1d] px-6 py-2 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#a31d1d] dark:bg-[#a31d1d] dark:text-white dark:hover:bg-white/5"
                     >
-                   {/* 🔥 Get Pro
-                  </Link>
-                  <Link
-                    href="https://github.com/NextJSTemplates/startup-nextjs"
-                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
-                   >
-                    */}
-                    Star on GitHub
+                    Get Started
                   </Link>
                 </div>
               </div>
             </div>
           </div>
+          <div className="mx-4 flex flex-wrap">
+            {/* Right Section (Image) */}
+                        <div className="h-[70vh]">
+                          <div className="relative mx-auto max-w-[500px] lg:mr-0">
+                            <img
+                              src="/images/about/image.png"
+                              alt="about-image"
+                              className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+                            />
+                            {/* <img
+                              src="/images/about/image.png"
+                              alt="about-image"
+                              width={500}
+                              height={400}
+                              className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
+                            /> */}
+                          </div>
+                        </div>
+          </div>
         </div>
-        <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
+        {/* <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
             width="450"
             height="556"
@@ -278,7 +291,7 @@ const Hero = () => {
               </radialGradient>
             </defs>
           </svg>
-        </div>
+        </div> */}
       </section>
     </>
   );
