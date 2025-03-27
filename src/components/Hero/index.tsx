@@ -8,8 +8,8 @@ const Hero = () => {
         className="relative z-10 overflow-hidden bg-[#ffffff] pb-16 pt-[120px] dark:bg-[#000000] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
         style={{ height: "100vh" }}
       >
-        <div className="container flex">
-          <div className="-mx-4 flex flex-wrap">
+        <div className="container flex h-[70vh]">
+          <div className="mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px]">
               <h1 className="mb-5 lg:text-[4rem] md:text-[3rem] sm:text-[2.5rem] text-[2rem] font-bold leading-tight text-[#a31d1d] sm:leading-tight md:leading-tight font-[Plus Jakarta Sans]">
@@ -30,6 +30,25 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="mx-4 flex flex-wrap">
+            {/* Right Section (Image) */}
+                        <div className="h-[70vh]">
+                          <div className="relative mx-auto max-w-[500px] lg:mr-0">
+                            <img
+                              src="/images/about/image.png"
+                              alt="about-image"
+                              className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+                            />
+                            {/* <img
+                              src="/images/about/image.png"
+                              alt="about-image"
+                              width={500}
+                              height={400}
+                              className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
+                            /> */}
+                          </div>
+                        </div>
           </div>
         </div>
         {/* <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
