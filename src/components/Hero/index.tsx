@@ -8,47 +8,41 @@ const Hero = () => {
         className="relative z-10 overflow-hidden bg-[#ffffff] pb-16 pt-[120px] dark:bg-[#000000] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
         style={{ height: "100vh" }}
       >
-        <div className="container flex h-[70vh]">
-          <div className="mx-4 flex flex-wrap">
-            <div className="w-full px-4">
-              <div className="mx-auto max-w-[800px]">
+        <div className="container flex flex-col md:flex-row h-[70vh]">
+          {/* Left Content */}
+          <div className="w-full md:w-1/2 px-4 flex items-center">
+            <div className="mx-auto max-w-[800px] text-center md:text-left">
               <h1 className="mb-5 lg:text-[4rem] md:text-[3rem] sm:text-[2.5rem] text-[2rem] font-bold leading-tight text-[#a31d1d] sm:leading-tight md:leading-tight font-[Plus Jakarta Sans]">
-  INNOVATING OFFLINE FASHION ADS AND MORE..
-</h1>
-
-
-                <p className="mb-12 max-w-lg m:text-md md:text-lg font-[Poppins]">
+                INNOVATING OFFLINE FASHION ADS AND MORE..
+              </h1>
+              <p className="mb-12 max-w-lg text-md md:text-lg font-[Poppins]">
                 Bridging the Gap Between Online Ads and In-Store Impact—Experience the Future of Advertising Today!
-                </p>
-                <div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Link
-                    href="https://forms.gle/zW4584QMNMkerPREA"
-                    className="inline-block rounded-full bg-[#a31d1d] px-6 py-2 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#a31d1d] dark:bg-[#a31d1d] dark:text-white dark:hover:bg-white/5"
-                    >
-                    Get Started
-                  </Link>
-                </div>
+              </p>
+              <div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                <Link
+                  href="https://forms.gle/zW4584QMNMkerPREA"
+                  className="inline-block rounded-full bg-[#a31d1d] px-6 py-2 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#a31d1d] dark:bg-[#a31d1d] dark:text-white dark:hover:bg-white/5"
+                >
+                  Get Started
+                </Link>
               </div>
             </div>
           </div>
-          <div className="mx-4 flex flex-wrap">
-            {/* Right Section (Image) */}
-                        <div className="h-[70vh]">
-                          <div className="relative mx-auto max-w-[500px] lg:mr-0">
-                            <img
-                              src="/images/about/image.png"
-                              alt="about-image"
-                              className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                            />
-                            {/* <img
-                              src="/images/about/image.png"
-                              alt="about-image"
-                              width={500}
-                              height={400}
-                              className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                            /> */}
-                          </div>
-                        </div>
+
+          {/* Right Section (Image) */}
+          <div className="w-full md:w-1/2 px-4 flex items-center justify-center">
+            <div className="relative mx-auto max-w-[500px]">
+              <img
+                src="/images/about/image.png"
+                alt="about-image"
+                className="w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[600px] h-auto sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] object-contain drop-shadow-three dark:hidden dark:drop-shadow-none"
+              />
+              <img
+                src="/images/about/image.png"
+                alt="about-image"
+                className="hidden dark:block w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[600px] h-auto sm:h-[250px] md:h-[300px] lg:h-[350px] xl:h-[400px] object-contain drop-shadow-three dark:drop-shadow-none"
+              />
+            </div>
           </div>
         </div>
         {/* <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
