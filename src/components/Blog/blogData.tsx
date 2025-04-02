@@ -10,12 +10,12 @@ const blogData: Blog[] = [
     author: {
       name: "Aman",
       image: "/images/blog/author-011.jpg",
-      designation: "Graphic Designer",
+      designation: "",
     },
     tags: ["Fashion"],
     
 
-    
+
     publishDate: "2025",
     
   },
@@ -28,7 +28,7 @@ const blogData: Blog[] = [
     author: {
       name: "Naman Sanghi",
       image: "/images/blog/author-02.png",
-      designation: "Content Writer",
+      designation: "",
     },
     tags: ["Technology"],
     publishDate: "2025",
@@ -42,7 +42,7 @@ const blogData: Blog[] = [
     author: {
       name: "Nitin Goyal",
       image: "/images/blog/author-03.jpg",
-      designation: "Graphic Designer",
+      designation: "",
     },
     tags: ["Marketing"],
     publishDate: "2025",
