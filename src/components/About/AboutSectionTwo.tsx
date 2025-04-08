@@ -1,73 +1,118 @@
 
 
-import Image from "next/image"; // Ensure Image is imported correctly
+import Image from "next/image";
 
 const AboutSectionTwo = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-28">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap items-center">
-          {/* Left Side Image */}
-          <div className="w-full px-4 lg:w-1/2">
-            <div className="relative mx-auto mb-12 max-w-[500px] text-center lg:m-0" data-wow-delay=".15s">
-              <div className="relative mx-auto max-w-[500px] lg:mr-0">
-                <Image
-                  src="/images/about/image2.png"
-                  alt="about-image"
-                  width={500} // Adjusts according to text size
-                  height={450} // Maintains aspect ratio
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0 object-cover"
-                  priority
-                />
-                <Image
-                  src="/images/about/image2.png"
-                  alt="about image"
-                  width={500}
-                  height={450}
-                  className="hidden drop-shadow-three dark:block dark:drop-shadow-none object-cover"
-                  priority
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side Text Content */}
-          <div className="w-full px-4 lg:w-1/2">
-            <div className="max-w-[470px]">
-              {/* Campaign Strategy */}
-              <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Campaign Strategy & Execution
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  We create and execute tailored campaigns to showcase your brand in the right retail spaces.
-                </p>
-              </div>
-              {/* Sampling & Product Trials */}
-              <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Sampling & Product Trials
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Engage customers by offering samples in partner stores, allowing them to experience your brand firsthand and build connections.
-                </p>
-              </div>
-              {/* Shelf Space Rental */}
-              <div className="mb-1">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Shelf Space Rental
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Secure premium shelf space in strategically selected retail stores that align with your target audience and price point, ensuring maximum product visibility.
-                </p>
-              </div>
-            </div>
-          </div>
-
+    <section className="bg-white dark:bg-gray-900">
+    {/* Image + Content Section */}
+    <div className="w-full px-8 relative">
+      {/* Full-Width Image */}
+      <Image
+        src="/images/about/image2.png"
+        alt="About Image"
+        width={1100}
+        height={300}
+        className="w-full h-96 object-cover rounded-2xl"
+        priority
+      />
+  
+      {/* White Box Content Inside Image (Left aligned) */}
+      <div className="absolute inset-0 flex items-center justify-start pl-12">
+        <div className="bg-white bg-opacity-95 rounded-3xl shadow-lg px-8 py-4 text-left max-w-md">
+          <h2 className="text-2xl font-bold text-black mb-2">Why Choose Us</h2>
+          <p className="text-gray-700 mb-4">
+            Discover why we're your top choice for Fashion Advertisements
+          </p>
+          <button className="bg-black text-white px-6 py-2 rounded-3xl text-sm hover:bg-gray-500 transition">
+            Get Started
+          </button>
         </div>
       </div>
-    </section>
+
+
+
+      <div className="absolute inset-0 flex flex-col items-end justify-center pr-10 gap-4">
+  {/* Box 1 */}
+  <div className="bg-white bg-opacity-100 rounded-full shadow-xl px-4 py-2 flex items-center gap-2">
+    <h3 className="text-m font-semibold text-black m-0">
+      Get Performance Metrics
+    </h3>
+    <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-700 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
+      </svg>
+    </div>
+  </div>
+
+  {/* Box 2 */}
+  <div className="bg-white bg-opacity-100 rounded-full shadow-xl px-4 py-2 flex items-center gap-2">
+    <h3 className="text-m font-semibold text-black m-0">
+      Local Market Penetration
+    </h3>
+    <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-700 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
+      </svg>
+    </div>
+  </div>
+
+  {/* Box 3 */}
+  <div className="bg-white bg-opacity-100 rounded-full shadow-xl px-4 py-2 flex items-center gap-2">
+    <h3 className="text-m font-semibold text-black m-0">
+      Collaborative Partnerships
+    </h3>
+    <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-700 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
+      </svg>
+    </div>
+  </div>
+
+  {/* Box 4 - Competitive Advantage */}
+  <div className="bg-white bg-opacity-100 rounded-full shadow-xl px-4 py-2 flex items-center gap-2">
+    <h3 className="text-m font-semibold text-black m-0">
+      Competitive Advantage
+    </h3>
+    <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-700 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
+      </svg>
+    </div>
+  </div>
+
+  {/* Box 5 - Flexible Plans (Smaller) */}
+<div className="bg-white bg-opacity-100 rounded-full shadow-xl px-4 py-2 flex items-center gap-2">
+  <h3 className="text-m font-semibold text-black m-0">
+    Flexible Plans
+  </h3>
+  <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-700 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
+    </svg>
+  </div>
+</div>
+
+
+  {/* Box 6 - Enhanced Brand Visibility */}
+  <div className="bg-white bg-opacity-100 rounded-full shadow-xl px-4 py-2 flex items-center gap-2">
+    <h3 className="text-m font-semibold text-black m-0">
+      Enhanced Brand Visibility
+    </h3>
+    <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-700 transition">
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 17L17 7M7 7h10v10" />
+      </svg>
+    </div>
+  </div>
+</div>
+
+</div>
+  </section>
+  
   );
 };
+
 export default AboutSectionTwo;
+
 
