@@ -11,7 +11,7 @@ const Hero = () => {
           {/* Left Content */}
           <div className="w-full order-2 xl:order-1 md:order-1 md:w-1/2 px-4 flex items-baseline">
             <div className="mx-auto max-w-[800px] md:text-left">
-              <h1 className="mb-5 lg:text-[4rem] md:text-[3rem] sm:text-[2.5rem] text-[2rem] font-bold leading-tight text-[#a31d1d] sm:leading-tight md:leading-tight font-[Plus Jakarta Sans]">
+              <h1 className="mb-5 lg:text-[4rem] md:text-[3rem] sm:text-[2.5rem] text-[2rem] font-bold leading-tight text-[#a31d1d] sm:leading-tight md:leading-tight" style={{ fontFamily: 'Plus Jakarta Sans' }}>
                 INNOVATING OFFLINE FASHION ADS AND MORE..
               </h1>
               <p className="mb-12 max-w-lg text-md md:text-lg font-[Poppins]">

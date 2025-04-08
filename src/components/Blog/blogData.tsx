@@ -3,9 +3,10 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
-    title: "Best UI components for modern websites",
-    paragraph:
-      "Discover the latest trends, tips, and insights to elevate your online presence and business growth.",
+    title: "The Art of Offline Fashion Storytelling: Weaving Magic into the Fabric of Reality",
+    paragraph: "",
+    // paragraph:
+    //   "Discover the latest trends, tips, and insights to elevate your online presence and business growth.",
     image: "/images/blog/blog-01.jpg",
     author: {
       name: "Aman",
