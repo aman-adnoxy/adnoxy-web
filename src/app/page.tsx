@@ -27,14 +27,22 @@ export default function Home() {
       <Features />
       <Video />
       <Brands />
+<<<<<<< HEAD
       {/*<AboutSectionOne />*/}
+=======
+>>>>>>> 392b61d6a20de124b06f06296151976242af585d
       <AboutSectionTwo />
+      <AboutSectionOne />
+      <FAQSection />
       {/* <Testimonials /> */}
       <Pricing />
       <FAQSection />
       <Blog />
       <Contact />
+<<<<<<< HEAD
    
+=======
+>>>>>>> 392b61d6a20de124b06f06296151976242af585d
     </>
   );
 }
