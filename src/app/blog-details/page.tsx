@@ -103,8 +103,8 @@ export const metadata: Metadata = {
                 </div>
                 <div>
                 <p className="mb-8 text-base font-medium leading-relaxed text-gray-500 sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                In today’s digital world, where screens dominate our every interaction, offline fashion storytelling stands as a powerful and timeless art form. While the digital landscape offers ease and reach, offline experiences create something far more immersive—an opportunity to touch, feel, and live fashion in ways that virtual platforms simply can’t replicate. This blog explores the captivating world of offline fashion storytelling, its core elements, and how brands can harness this art to create unforgettable experiences in an increasingly crowded digital age.
-                  </p>
+                In today’s digital world, where screens dominate our every interaction, offline fashion storytelling stands as a powerful and timeless art form. While the digital landscape offers ease and reach, offline experiences create something far more immersive—an opportunity to touch, feel, and live fashion in ways that virtual platforms simply can’t replicate. This blog explores the captivating world of offline fashion experiences, its core elements, and how brands can harness this art to create unforgettable experiences in an increasingly crowded digital age.
+                 </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                       <Image
