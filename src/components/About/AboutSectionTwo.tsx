@@ -4,17 +4,23 @@ import Image from "next/image";
 
 const AboutSectionTwo = () => {
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-white">
     {/* Image + Content Section */}
-    <div className="w-full px-8 relative">
+    <div className="container px-3 relative">
       {/* Full-Width Image */}
-      <Image
+      {/* <Image
         src="/images/about/image2.png"
         alt="About Image"
         width={1100}
-        height={300}
+        height={"90vh"}
         className="w-full h-96 object-cover rounded-2xl"
         priority
+      /> */}
+
+      <img
+        src="/images/about/image2.png"
+        alt="About Image"
+        className="w-full h-[90vh] object-cover rounded-3xl"
       />
   
       {/* White Box Content Inside Image (Left aligned) */}
