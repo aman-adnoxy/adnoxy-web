@@ -24,7 +24,7 @@ const blogData: Blog[] = [
     id: 2,
     title: "Omni-Channel Sales: The Future of Seamless Customer Experiences.",
     paragraph:
-     "Sales unify online and offline experiences,ensuring seamless customer interactions and becoming essential for success in today’s retail landscape.",
+     "Sales unify online and offline experiences, ensuring seamless customer interactions and becoming essential for success in today’s retail landscape.",
     image: "/images/blog/blog-022.jpg",
     author: {
       name: "Naman Sanghi",

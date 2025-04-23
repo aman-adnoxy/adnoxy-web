@@ -14,10 +14,10 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
   const toggleAnswer = () => setIsOpen(!isOpen);
 
   return (
-    <div className="faq-item mb-1 px-4 py-2 border-b border-gray-900 last:border-none">
+    <div className="faq-item mb-1 px-4 py-2">
       <div
         onClick={toggleAnswer}
-        className="cursor-pointer flex items-center justify-between text-sm font-medium text-black hover:text-gray-600 dark:text-white dark:hover:text-gray-400 w-full"
+        className="cursor-pointer flex my-2 items-center justify-between text-md font-medium text-black hover:text-gray-600 w-full"
       >
         <span>{question}</span>
         <span
@@ -29,7 +29,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
         </span>
       </div>
       {isOpen && (
-        <div className="mt-1 text-xs text-gray-700 dark:text-gray-400 px-1">
+        <div className="mt-2 mb-2 text-sm dark:text-gray-400">
           {answer}
         </div>
       )}
