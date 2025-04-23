@@ -27,8 +27,6 @@ const VideoPlayer = ({ isOpen, setIsOpen }) => {
 };
 
 const Video = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -42,31 +40,29 @@ const Video = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div
-              className="mx-auto max-w-[770px] overflow-hidden rounded-md"
+              className="mx-auto max-w-[770px] overflow-hidden rounded-md border border-gray-300 shadow-[0_0_20px_rgba(211,211,211,0.6)] transition-all duration-300"
               data-wow-delay=".15s"
             >
-              <div className="relative aspect-[77/40] flex items-center justify-center">
-                <Image src="/images/blog/blog-details-02.jpg" alt="video image" fill />
-                <div className="absolute right-0 top-0 flex h-full w-full items-center justify-center">
-                  <button
-                    onClick={() => setIsOpen(true)}
-                    className="rounded-full bg-[#a31d1d] px-6 py-3 text-white text-lg font-semibold transition hover:bg-[#891818]"
-                  >
-                    ▶ 
-                  </button>
-                </div>
+              <div className="relative aspect-[77/40]">
+                <video
+                  src="/images/video/myvideo.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover rounded-md"
+                >
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
         </div>
-
-        <VideoPlayer isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
-
-      {/* <div className="absolute bottom-0 left-0 right-0 z-[-1] h-full w-full bg-[url(/images/video/shape.svg)] bg-cover bg-center bg-no-repeat"></div> */}
     </section>
   );
 };
+
 
 
 export default Video;
