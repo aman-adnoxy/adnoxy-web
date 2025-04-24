@@ -17,7 +17,7 @@ const blogData: Blog[] = [
     
 
 
-    publishDate: "2025",
+    publishDate: "Feb 22, 2025",
     
   },
   {
@@ -32,7 +32,7 @@ const blogData: Blog[] = [
       designation: "",
     },
     tags: ["Technology"],
-    publishDate: "2025",
+    publishDate: "Jan 25, 2025",
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const blogData: Blog[] = [
       designation: "",
     },
     tags: ["Marketing"],
-    publishDate: "2025",
+    publishDate: "Jan 10, 2025",
   },
   
 ];
