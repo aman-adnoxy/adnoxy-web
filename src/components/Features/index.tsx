@@ -5,8 +5,8 @@ import featuresData from "./featuresData";
 const Features = () => {
   return (
     <>
-      <section id="features">
-        <div className="container p-10 md:text-xl sm:text-lg rounded-2xl bg-[#f5f5f5]" style={{ fontFamily: 'Plus Jakarta Sans' }}>
+      <section id="features" className="bg-white">
+        <div className="container p-10 md:text-xl sm:text-lg rounded-3xl bg-[#f5f5f5]" style={{ fontFamily: 'Plus Jakarta Sans' }}>
           <SectionTitle
             title="Our Services"
             paragraph=""
