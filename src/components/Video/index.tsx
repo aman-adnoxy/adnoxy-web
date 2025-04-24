@@ -1,32 +1,34 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
-import ModalVideo from "react-modal-video";
-
-const VideoPlayer = ({ isOpen, setIsOpen }) => {
-  return (
-    isOpen && (
-      <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75">
-        <div className="relative">
-          <video width="640" height="360" controls autoPlay>
-            <source src="/images/video/myvideo.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="absolute -top-4 -right-4 bg-[#a31d1d] px-2 py-1 text-white rounded-full"
-          >
-            ✕
-          </button>
-        </div>
-      </div>
-    )
-  );
-};
 
 const Video = () => {
+  const statsRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasEntered, setHasEntered] = useState(false); // bounce trigger
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasEntered) {
+          setIsVisible(true);
+          setTimeout(() => {
+            setIsVisible(false); // animate out
+            setTimeout(() => {
+              setHasEntered(true); // animate back in
+            }, 200); // small delay
+          }, 100); // start exit motion
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+  }, [hasEntered]);
+
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -39,10 +41,8 @@ const Video = () => {
 
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div
-              className="mx-auto max-w-[770px] overflow-hidden rounded-md border border-gray-300 shadow-[0_0_20px_rgba(211,211,211,0.6)] transition-all duration-300"
-              data-wow-delay=".15s"
-            >
+            {/* Video Box */}
+            <div className="mx-auto max-w-[870px] overflow-hidden rounded-md border border-gray-300 shadow-[0_0_20px_rgba(211,211,211,0.6)] transition-all duration-300">
               <div className="relative aspect-[77/40]">
                 <video
                   src="/images/video/myvideo.mp4"
@@ -56,6 +56,34 @@ const Video = () => {
                 </video>
               </div>
             </div>
+
+            {/* Stats Row */}
+            <div
+              ref={statsRef}
+              className="mt-10 mx-auto max-w-[770px] flex flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left px-4"
+            >
+              {[
+                { value: "200+", label: "Premium Retail Outlets", delay: "delay-100" },
+                { value: "10M+", label: "Daily Impressions", delay: "delay-300" },
+                { value: "3+", label: "Major Cities", delay: "delay-500" },
+              ].map((stat, index) => {
+                const animationClass = hasEntered
+                  ? `opacity-100 translate-y-0 scale-100 ${stat.delay}`
+                  : isVisible
+                  ? "opacity-0 -translate-y-5 scale-110"
+                  : "opacity-0 translate-y-10 scale-95";
+
+                return (
+                  <div
+                    key={index}
+                    className={`flex-1 transition-all duration-700 ease-in-out transform ${animationClass}`}
+                  >
+                    <h3 className="text-4xl font-bold text-[#a31d1d]">{stat.value}</h3>
+                    <p className="text-lg font-medium text-gray-700">{stat.label}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
@@ -63,6 +91,7 @@ const Video = () => {
   );
 };
 
-
-
 export default Video;
+
+
+

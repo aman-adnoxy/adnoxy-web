@@ -1,7 +1,58 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
+
   return (
+<<<<<<< HEAD
+    <section
+      id="home"
+      className="relative z-10 overflow-hidden bg-[#ffffff] dark:bg-[#000000] h-fit pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[4rem] xl:pt-[10rem]"
+    >
+      <div className="container flex flex-col md:flex-row justify-center items-center">
+        {/* Left Content */}
+        <div className="flex-col w-[65vw] h-[75vh] order-2 xl:order-1 md:order-1 px-4 flex items-baseline">
+          <div className="max-w-[800px] md:text-left">
+            <h1
+              className={`mb-5 lg:text-[4rem] md:text-[3rem] sm:text-[2.5rem] text-[2rem] font-bold leading-tight text-[#a31d1d] sm:leading-tight md:leading-tight transition-all duration-1000 ease-out transform ${
+                animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              }`}
+              style={{ fontFamily: "Plus Jakarta Sans" }}
+            >
+              INNOVATING OFFLINE ADS AND MORE..
+            </h1>
+          </div>
+
+          <div className="flex h-lvh py-4 w-[60vw] justify-center lg:justify-start md:justify-start xl:justify-between">
+            <div className="mx-15">
+              <p
+                className={`mb-12 max-w-lg text-md md:text-lg font-[Poppins] transition-all duration-1000 delay-200 ease-out transform ${
+                  animate ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
+              >
+                Bridging the Gap Between Online Ads and In-Store Impact—Experience the Future of Advertising Today!
+              </p>
+
+              <div
+                className={`flex flex-col items-center justify-start sm:justify-center md:justify-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 transition-opacity duration-1000 delay-500 ${
+                  animate ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                <Link
+                  href="https://forms.gle/zW4584QMNMkerPREA"
+                  className="inline-block rounded-full bg-[#a31d1d] px-6 py-2 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#a31d1d] hover:scale-105 transform transition"
+                >
+                  Get Started
+                </Link>
+              </div>
+=======
     <>
       <section
         id="home"
@@ -16,285 +67,41 @@ const Hero = () => {
               <h1 className="mb-5 lg:text-[4rem] md:text-[3rem] sm:text-[2.5rem] text-[2rem] font-bold leading-tight text-[#a31d1d] sm:leading-tight md:leading-tight" style={{ fontFamily: 'Plus Jakarta Sans' }}>
                 INNOVATING OFFLINE ADS AND MORE..
               </h1>
+>>>>>>> 00e5f445d6d9f1ff800119dd3fb1b90529da3a3d
             </div>
 
-
-              <div className="flex h-lvh py-4 w-[60vw] justify-center lg:justify-start md:justify-start xl:justify-between">
-                <div className="mx-15">
-                  <p className="mb-12 max-w-lg text-md md:text-lg font-[Poppins]">
-                    Bridging the Gap Between Online Ads and In-Store Impact—Experience the Future of Advertising Today!
-                  </p>
-                  <div className="flex flex-col items-center justify-start sm:justify-center md:justify-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                    <Link
-                      href="https://forms.gle/zW4584QMNMkerPREA"
-                      className="inline-block rounded-full bg-[#a31d1d] px-6 py-2 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#a31d1d]"
-                    >
-                      Get Started
-                    </Link>
-                  </div>
-                </div>
-                <div className="flex items-end">
-                  <img
-                    src="/images/about/image.png"
-                    alt="about-image"
-                    className="h-[35vh] w-[15vw] hidden xl:flex object-cover drop-shadow-three rounded-3xl"
-                  />
-              </div>
-              </div>
-              </div>
-
-          {/* Right Section (Image) */}
-          <div className="order-1 px-4 pb-10 xl:order-2 w-[30vw] md:order-2 items-center justify-items-center">
+            <div
+              className={`flex items-end transition-all duration-1000 delay-700 ease-out transform ${
+                animate ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              }`}
+            >
               <img
-                src="/images/hero/sale.jpg"
+                src="/images/about/image.png"
                 alt="about-image"
+<<<<<<< HEAD
+                className="h-[35vh] w-[15vw] hidden xl:flex object-cover drop-shadow-three rounded-3xl"
+=======
                 className="aspect-[4/5] h-[40vh] xl:h-[75vh] lg:h-[60vh] md:h-[50vh] sm:h-[50vh] max-w-[400px] sm:max-w-[450px] md:max-w-[450px] lg:max-w-[460px] object-cover drop-shadow-three rounded-3xl"
+>>>>>>> 00e5f445d6d9f1ff800119dd3fb1b90529da3a3d
               />
             </div>
           </div>
-        {/* <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100">
-          <svg
-            width="450"
-            height="556"
-            viewBox="0 0 450 556"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle
-              cx="277"
-              cy="63"
-              r="225"
-              fill="url(#paint0_linear_25:217)"
-            />
-            <circle
-              cx="17.9997"
-              cy="182"
-              r="18"
-              fill="url(#paint1_radial_25:217)"
-            />
-            <circle
-              cx="76.9997"
-              cy="288"
-              r="34"
-              fill="url(#paint2_radial_25:217)"
-            />
-            <circle
-              cx="325.486"
-              cy="302.87"
-              r="180"
-              transform="rotate(-37.6852 325.486 302.87)"
-              fill="url(#paint3_linear_25:217)"
-            />
-            <circle
-              opacity="0.8"
-              cx="184.521"
-              cy="315.521"
-              r="132.862"
-              transform="rotate(114.874 184.521 315.521)"
-              stroke="url(#paint4_linear_25:217)"
-            />
-            <circle
-              opacity="0.8"
-              cx="356"
-              cy="290"
-              r="179.5"
-              transform="rotate(-30 356 290)"
-              stroke="url(#paint5_linear_25:217)"
-            />
-            <circle
-              opacity="0.9"
-              cx="191.659"
-              cy="302.659"
-              r="133.362"
-              transform="rotate(133.319 191.659 302.659)"
-              fill="url(#paint6_linear_25:217)"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_25:217"
-                x1="-54.5003"
-                y1="-178"
-                x2="222"
-                y2="288"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <radialGradient
-                id="paint1_radial_25:217"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(17.9997 182) rotate(90) scale(18)"
-              >
-                <stop offset="0.145833" stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08" />
-              </radialGradient>
-              <radialGradient
-                id="paint2_radial_25:217"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(76.9997 288) rotate(90) scale(34)"
-              >
-                <stop offset="0.145833" stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0.08" />
-              </radialGradient>
-              <linearGradient
-                id="paint3_linear_25:217"
-                x1="226.775"
-                y1="-66.1548"
-                x2="292.157"
-                y2="351.421"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint4_linear_25:217"
-                x1="184.521"
-                y1="182.159"
-                x2="184.521"
-                y2="448.882"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="white" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint5_linear_25:217"
-                x1="356"
-                y1="110"
-                x2="356"
-                y2="470"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="white" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint6_linear_25:217"
-                x1="118.524"
-                y1="29.2497"
-                x2="166.965"
-                y2="338.63"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-          </svg>
         </div>
-        <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100">
-          <svg
-            width="364"
-            height="201"
-            viewBox="0 0 364 201"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
-              stroke="url(#paint0_linear_25:218)"
-            />
-            <path
-              d="M-22.1107 72.3303C5.65989 66.4798 73.3965 64.9086 122.178 105.427C183.155 156.076 201.59 162.093 236.333 166.607C271.076 171.12 309.718 183.657 334.889 212.24"
-              stroke="url(#paint1_linear_25:218)"
-            />
-            <path
-              d="M-53.1107 72.3303C-25.3401 66.4798 42.3965 64.9086 91.1783 105.427C152.155 156.076 170.59 162.093 205.333 166.607C240.076 171.12 278.718 183.657 303.889 212.24"
-              stroke="url(#paint2_linear_25:218)"
-            />
-            <path
-              d="M-98.1618 65.0889C-68.1416 60.0601 4.73364 60.4882 56.0734 102.431C120.248 154.86 139.905 161.419 177.137 166.956C214.37 172.493 255.575 186.165 281.856 215.481"
-              stroke="url(#paint3_linear_25:218)"
-            />
-            <circle
-              opacity="0.8"
-              cx="214.505"
-              cy="60.5054"
-              r="49.7205"
-              transform="rotate(-13.421 214.505 60.5054)"
-              stroke="url(#paint4_linear_25:218)"
-            />
-            <circle cx="220" cy="63" r="43" fill="url(#paint5_radial_25:218)" />
-            <defs>
-              <linearGradient
-                id="paint0_linear_25:218"
-                x1="184.389"
-                y1="69.2405"
-                x2="184.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_25:218"
-                x1="156.389"
-                y1="69.2405"
-                x2="156.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint2_linear_25:218"
-                x1="125.389"
-                y1="69.2405"
-                x2="125.389"
-                y2="212.24"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint3_linear_25:218"
-                x1="93.8507"
-                y1="67.2674"
-                x2="89.9278"
-                y2="210.214"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0" />
-                <stop offset="1" stopColor="#4A6CF7" />
-              </linearGradient>
-              <linearGradient
-                id="paint4_linear_25:218"
-                x1="214.505"
-                y1="10.2849"
-                x2="212.684"
-                y2="99.5816"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <radialGradient
-                id="paint5_radial_25:218"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(220 63) rotate(90) scale(43)"
-              >
-                <stop offset="0.145833" stopColor="white" stopOpacity="0" />
-                <stop offset="1" stopColor="white" stopOpacity="0.08" />
-              </radialGradient>
-            </defs>
-          </svg>
-        </div> */}
-      </section>
-    </>
+
+        {/* Right Image Section */}
+        <div
+          className={`order-1 px-4 pb-10 xl:order-2 w-[30vw] md:order-2 items-center justify-items-center transition-all duration-1000 delay-700 ease-out transform ${
+            animate ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          }`}
+        >
+          <img
+            src="/images/hero/sale.jpg"
+            alt="hero-image"
+            className="aspect-[4/5] h-[40vh] xl:h-[75vh] lg:h-[60vh] md:h-[50vh] sm:h-[50vh] max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[600px] object-cover drop-shadow-three rounded-3xl"
+          />
+        </div>
+      </div>
+    </section>
   );
 };
 
