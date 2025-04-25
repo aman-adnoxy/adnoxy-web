@@ -18,28 +18,30 @@ const BlogDetailsPage = () => {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="mb-5 text-3xl font-bold leading-tight text-red-600 dark:text-red-600 sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight font-serif">
+                <h2 className="mb-5 text-3xl font-bold leading-tight text-[#a31d1d] dark:text-[#a31d1d] sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight" style={{ fontFamily: 'Plus Jakarta Sans' }}>
                   <a href="/services/advertising" className="hover:underline">
                     Experience the Future of Advertising – Partner with Us Today!
                   </a>
                 </h2>
-                <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
+                <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10 font-['Poppins']">
                   <div className="flex flex-wrap items-center">
                     <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
                           <a href="/about">
+                          <div className="rounded-3xl">
                             <Image
                               src="/images/blog/author-011.jpg"
                               alt="author"
                               fill
                             />
+                            </div>
                           </a>
                         </div>
                       </div>
                       <div className="w-full">
                         <span className="mb-1 text-base font-medium text-body-color">
-                          By <a href="/about" className="text-red-600 hover:underline">Our Team</a>
+                          By <a href="/about" className="text-[#a31d1d] hover:underline">AMAN</a>
                         </span>
                       </div>
                     </div>
@@ -107,7 +109,7 @@ const BlogDetailsPage = () => {
                 </div>
                 <div>
                   <p className="mb-8 text-base font-medium leading-relaxed text-gray-500 sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    In today's digital world, where screens dominate our every interaction, offline fashion storytelling stands as a powerful and timeless art form. While the digital landscape offers ease and reach, offline experiences create something far more immersive—an opportunity to touch, feel, and live fashion in ways that virtual platforms simply can't replicate. This blog explores the captivating world of <a href="/offline-experiences" className="text-red-600 hover:underline">offline fashion experiences</a>, its core elements, and how brands can harness this art to create unforgettable experiences in an increasingly crowded digital age.
+                    In today's digital world, where screens dominate our every interaction, offline fashion storytelling stands as a powerful and timeless art form. While the digital landscape offers ease and reach, offline experiences create something far more immersive—an opportunity to touch, feel, and live fashion in ways that virtual platforms simply can't replicate. This blog explores the captivating world of <a href="/offline-experiences" className="text-[#a31d1d] hover:underline">offline fashion experiences</a>, its core elements, and how brands can harness this art to create unforgettable experiences in an increasingly crowded digital age.
                   </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <a href="/gallery/fashion-events">
@@ -132,18 +134,18 @@ const BlogDetailsPage = () => {
                   </p>
                   <ul className="mb-10 list-inside list-disc text-body-color">
                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      <a href="https://www.alexandermcqueen.com" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:underline">Alexander McQueen's Runway Shows</a>
+                      <a href="https://www.alexandermcqueen.com" target="_blank" rel="noopener noreferrer" className="text-[#a31d1d] hover:underline">Alexander McQueen's Runway Shows</a>
                     </li>
                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      <a href="https://www.gucci.com" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:underline">Gucci's Gucci Garden</a>
+                      <a href="https://www.gucci.com" target="_blank" rel="noopener noreferrer" className="text-[#a31d1d] hover:underline">Gucci's Gucci Garden</a>
                     </li>
                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-                      <a href="https://www.chanel.com" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:underline">Chanel's Pop-Up Experiences</a>
+                      <a href="https://www.chanel.com" target="_blank" rel="noopener noreferrer" className="text-[#a31d1d] hover:underline">Chanel's Pop-Up Experiences</a>
                     </li>
                   </ul>
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <p className="text-center text-base font-medium italic text-body-color">
-                      As technology evolves, the possibilities for offline storytelling expand. Brands can now integrate <a href="/ar-experiences" className="text-red-600 hover:underline">interactive materials</a>, <a href="/vr-solutions" className="text-red-600 hover:underline">augmented reality</a>, and cutting-edge installations to create even more engaging experiences. The future promises exciting developments, such as:
+                      As technology evolves, the possibilities for offline storytelling expand. Brands can now integrate <a href="/ar-experiences" className="text-[#a31d1d] hover:underline">interactive materials</a>, <a href="/vr-solutions" className="text-[#a31d1d] hover:underline">augmented reality</a>, and cutting-edge installations to create even more engaging experiences. The future promises exciting developments, such as:
                     </p>
                     <span className="absolute left-0 top-0 z-[-1]">
                       <svg

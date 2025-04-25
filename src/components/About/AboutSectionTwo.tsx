@@ -22,12 +22,12 @@ const AboutSectionTwo = () => {
 
   return (
     <section className="bg-white">
-      <div className="container px-3 relative">
+      <div className="container px-3 relative py-16 font-[Poppins]">
         {/* Full-Width Image with animation */}
         <img
           src="/images/about/image2.png"
           alt="About Image"
-          className={`w-full h-[90vh] object-cover rounded-3xl transition-all duration-1000 ease-out transform ${
+          className={`w-full h-[80vh] object-cover rounded-3xl transition-all duration-1000 ease-out transform ${
             animate ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
         />
