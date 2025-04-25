@@ -18,7 +18,7 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <div className="faq-section min-h-[85vh] pt-16 md:pt-20 lg:pt-28 bg-gray-50">
+    <div className="faq-section min-h-[85vh] pt-16">
       <h2 className="text-[2rem] lg:text-[3rem] md:text-[2.5rem] sm:text-[2rem] font-bold text-center text-black mb-6" style={{ fontFamily: 'Plus Jakarta Sans' }}>Frequently Asked Questions</h2>
       <div className="max-w-3xl mx-auto mt-8 font-[Poppins] bg-[#f5f5f5] rounded-3xl p-6">
         {faqData.map((faq, index) => (

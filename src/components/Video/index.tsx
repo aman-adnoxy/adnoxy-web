@@ -30,19 +30,14 @@ const Video = () => {
   }, [hasEntered]);
 
   return (
-    <section className="relative z-10 py-16 md:py-20 lg:py-28">
+    <section className="relative z-10 py-16">
       <div className="container">
-        <SectionTitle
-          title="We are ready to help"
-          paragraph="ADNOXY redefines offline fashion ads, seamlessly blending digital reach with real-world impact. Innovation starts here!"
-          center
-          mb="80px"
-        />
+      <h2 className="text-[2rem] lg:text-[3rem] md:text-[2.5rem] sm:text-[2rem] font-extrabold text-center text-black mb-10" style={{ fontFamily: 'Plus Jakarta Sans' }}>Your Brand's Best Story, Told Boldly.</h2>
 
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             {/* Video Box */}
-            <div className="mx-auto max-w-[870px] overflow-hidden rounded-md border border-gray-300 shadow-[0_0_20px_rgba(211,211,211,0.6)] transition-all duration-300">
+            <div className="mx-auto h-auto max-h-[70vh] overflow-hidden rounded-3xl border border-gray-300 shadow-[0_0_20px_rgba(211,211,211,0.6)] transition-all duration-300">
               <div className="relative aspect-[77/40]">
                 <video
                   src="/images/video/myvideo.mp4"
@@ -60,7 +55,7 @@ const Video = () => {
             {/* Stats Row */}
             <div
               ref={statsRef}
-              className="mt-10 mx-auto max-w-[770px] flex flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left px-4"
+              className="mt-20 flex flex-col items-center justify-between gap-8 text-center md:flex-row md:text-left px-4"
             >
               {[
                 { value: "200+", label: "Premium Retail Outlets", delay: "delay-100" },
@@ -76,10 +71,10 @@ const Video = () => {
                 return (
                   <div
                     key={index}
-                    className={`flex-1 transition-all duration-700 ease-in-out transform ${animationClass}`}
+                    className={`flex-1 transition-all justify-items-center duration-700 ease-in-out transform ${animationClass}`}
                   >
-                    <h3 className="text-4xl font-bold text-[#a31d1d]">{stat.value}</h3>
-                    <p className="text-lg font-medium text-gray-700">{stat.label}</p>
+                    <h3 className="text-4xl font-extrabold text-[#a31d1d]" style={{ fontFamily: 'Plus Jakarta Sans' }}>{stat.value}</h3>
+                    <p className="text-lg font-medium text-gray-700 font-['Poppins']">{stat.label}</p>
                   </div>
                 );
               })}

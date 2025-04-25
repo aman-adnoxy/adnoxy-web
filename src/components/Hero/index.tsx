@@ -13,9 +13,13 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative z-10 overflow-hidden bg-[#ffffff] dark:bg-[#000000] h-fit pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[4rem] xl:pt-[10rem]"
+      className="relative z-10 overflow-hidden bg-[#ffffff] dark:bg-[#000000] h-fit pb-16 pt-[120px]"
     >
+<<<<<<< HEAD
       <div className="container w-full pt-4 flex flex-col md:flex-row justify-center items-center">
+=======
+      <div className="h-[90vh] container flex flex-col md:flex-row justify-center items-center">
+>>>>>>> a6c3b82ec66e7d9b45c33584e3c6d0c0464a980d
         {/* Left Content */}
         <div className="flex-col w-[65vw] h-[75vh] order-2 xl:order-1 md:order-1 px-4 flex items-baseline">
           <div className="max-w-[800px] md:text-left">
@@ -29,7 +33,7 @@ const Hero = () => {
             </h1>
           </div>
 
-          <div className="flex h-lvh py-4 w-[60vw] justify-center lg:justify-start md:justify-start xl:justify-between">
+          <div className="flex h-full py-4 w-[60vw] justify-center lg:justify-start md:justify-start xl:justify-between">
             <div className="mx-15">
               <p
                 className={`mb-12 max-w-lg text-md md:text-lg font-[Poppins] transition-all duration-1000 delay-200 ease-out transform ${
@@ -54,6 +58,7 @@ const Hero = () => {
             </div>
           </div>
 
+<<<<<<< HEAD
           <div
             className={`flex items-end transition-all duration-1000 delay-700 ease-out transform ${
               animate ? "opacity-100 scale-100" : "opacity-0 scale-95"
@@ -64,6 +69,19 @@ const Hero = () => {
               alt="about-image"
               className="h-[35vh] w-[15vw] hidden xl:flex object-cover drop-shadow-three rounded-3xl"
             />
+=======
+            <div
+              className={`flex items-end transition-all duration-1000 delay-700 ease-out transform ${
+                animate ? "opacity-100 scale-100" : "opacity-0 scale-95"
+              }`}
+            >
+              <img
+                src="/images/about/image.png"
+                alt="about-image"
+                className="aspect-[4/5] h-[40vh] hidden xl:flex max-w-[400px] sm:max-w-[450px] md:max-w-[450px] lg:max-w-[460px] object-cover drop-shadow-three rounded-3xl"
+              />
+            </div>
+>>>>>>> a6c3b82ec66e7d9b45c33584e3c6d0c0464a980d
           </div>
         </div>
 
