@@ -51,6 +51,25 @@ const Hero = () => {
                   Get Started
                 </Link>
               </div>
+<<<<<<< HEAD
+=======
+=======
+    <>
+      <section
+        id="home"
+        className="relative z-10 overflow-hidden bg-[#ffffff] dark:bg-[#000000] h-fit pb-16 pt-[8rem] md:pb-[120px] md:pt-[150px] xl:pb-[4rem] xl:pt-[8rem]"
+      >
+        {/* <div className="container flex flex-col md:flex-row"> */}
+        <div className="container w-full pt-4 flex flex-col md:flex-row justify-center items-center">
+          {/* Left Content */}
+          {/* <div className="w-full order-2 xl:order-1 md:order-1 md:w-1/2 px-4 flex items-baseline"> */}
+          <div className="flex-col h-[50vh] xl:h-[75vh] md:h-[65vh] order-2 xl:order-1 md:order-1 px-4 flex items-baseline">
+            <div className="max-w-[800px] md:text-left">
+              <h1 className="mb-5 lg:text-[4rem] md:text-[3rem] sm:text-[2.5rem] text-[2rem] font-bold leading-tight text-[#a31d1d] sm:leading-tight md:leading-tight" style={{ fontFamily: 'Plus Jakarta Sans' }}>
+                INNOVATING OFFLINE ADS AND MORE..
+              </h1>
+>>>>>>> 00e5f445d6d9f1ff800119dd3fb1b90529da3a3d
+>>>>>>> ed493d15462f44e76b3ec3939bbf8527d3ea93b5
             </div>
 
             <div
@@ -61,7 +80,7 @@ const Hero = () => {
               <img
                 src="/images/about/image.png"
                 alt="about-image"
-                className="aspect-[4/5] h-[40vh] hidden xl:flex max-w-[400px] sm:max-w-[450px] md:max-w-[450px] lg:max-w-[460px] object-cover drop-shadow-three rounded-3xl"
+                className="h-[35vh] w-[15vw] hidden xl:flex object-cover drop-shadow-three rounded-3xl"
               />
             </div>
           </div>
@@ -83,5 +102,6 @@ const Hero = () => {
     </section>
   );
 };
+ 
 
 export default Hero;
