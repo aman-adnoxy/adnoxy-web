@@ -4,6 +4,7 @@ import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
+import FAQSection from "@/components/FAQ/FAQSection";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
@@ -12,9 +13,8 @@ import Video from "@/components/Video";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: " ADNOXY",
+  title: "ADNOXY",
   description: "This is Home for ADNOXY",
-  // other metadata
 };
 
 export default function Home() {
@@ -24,13 +24,14 @@ export default function Home() {
       <Hero />
       <Features />
       <Video />
-      <Brands />
-      <AboutSectionOne />
+      {/* <Brands /> */}
       <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
+      <FAQSection />
+      {/* <Testimonials /> */}
+      {/* <Pricing /> */}
       <Blog />
       <Contact />
     </>
   );
 }
+

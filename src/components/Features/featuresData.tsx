@@ -4,7 +4,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <svg width="50" height="50" viewBox="0 0 50 50" className="fill-current text-black">
+      <svg width="30" height="30" viewBox="0 0 50 50" className="fill-current text-black">
         <path d="M5 15 L45 15 L40 45 L10 45 Z" fill="none" stroke="currentColor" strokeWidth="3"/> 
         <rect x="10" y="5" width="30" height="10" rx="2" fill="currentColor"/>
         <circle cx="15" cy="35" r="3" fill="currentColor"/>
@@ -20,7 +20,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <svg width="60" height="60" viewBox="0 0 40 40" className="fill-current text-black">
+      <svg width="38" height="38" viewBox="0 0 40 40" className="fill-current text-black">
         <circle cx="20" cy="20" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
         <circle cx="20" cy="20" r="5" fill="currentColor"/>
         
@@ -38,7 +38,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <svg width="55" height="55" viewBox="0 0 40 40" className="fill-current text-black">
+      <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current text-black">
         <path d="M5 30 C10 35, 20 35, 25 30" stroke="currentColor" strokeWidth="2" fill="none"/>
         <path d="M10 30 C12 28, 18 28, 20 30" stroke="currentColor" strokeWidth="2" fill="none"/>
   
@@ -56,7 +56,7 @@ const featuresData: Feature[] = [
   {
     id: 1,
     icon: (
-      <svg width="45" height="47" viewBox="0 0 40 42" className="fill-current text-black">
+      <svg width="30" height="30" viewBox="0 0 40 42" className="fill-current text-black">
         <rect x="5" y="5" width="30" height="5" stroke="currentColor" strokeWidth="2" fill="none"/>
         <rect x="5" y="15" width="30" height="5" stroke="currentColor" strokeWidth="2" fill="none"/>
         <rect x="5" y="25" width="30" height="5" stroke="currentColor" strokeWidth="2" fill="none"/>
