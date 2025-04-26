@@ -59,8 +59,8 @@ const Video = () => {
             >
               {[
                 { value: "200+", label: "Premium Retail Outlets", delay: "delay-100" },
-                { value: "10M+", label: "Daily Impressions", delay: "delay-300" },
-                { value: "3+", label: "Major Cities", delay: "delay-500" },
+                { value: "10M+", label: "Daily Impressions", delay: "delay-100" },
+                { value: "3+", label: "Major Cities", delay: "delay-100" },
               ].map((stat, index) => {
                 const animationClass = hasEntered
                   ? `opacity-100 translate-y-0 scale-100 ${stat.delay}`
