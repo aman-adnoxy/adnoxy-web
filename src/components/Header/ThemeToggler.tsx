@@ -3,6 +3,7 @@ import { useTheme } from "next-themes";
 const ThemeToggler = () => {
   const { theme, setTheme } = useTheme();
   return (
+    setTheme("light")
     // <button aria-label='theme toggler'
     //   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     //    >
@@ -36,7 +37,6 @@ const ThemeToggler = () => {
     //     />
     //   </svg>
     // </button>
-    true
   );
 };
 
