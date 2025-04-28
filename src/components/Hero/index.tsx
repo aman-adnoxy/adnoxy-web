@@ -76,7 +76,7 @@ const Hero = () => {
           <img
             src="/images/hero/sale.jpg"
             alt="hero-image"
-            className="aspect-[4/5] h-[40vh] xl:h-[75vh] lg:h-[60vh] md:h-[50vh] sm:h-[50vh] max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[600px] object-cover drop-shadow-three rounded-3xl"
+            className="aspect-[77/78] xl:aspect-[4/5] lg:aspect-[4/5] sm:aspect-[4/5] h-[40vh] xl:h-[75vh] lg:h-[60vh] md:h-[50vh] sm:h-[50vh] max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[600px] object-cover drop-shadow-three rounded-3xl"
           />
         </div>
       </div>

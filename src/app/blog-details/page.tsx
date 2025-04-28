@@ -28,7 +28,7 @@ const BlogDetailsPage = () => {
                     <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                          <a href="/about">
+                          <a href="/about"> 
                           <div className="rounded-3xl">
                             <Image
                               src="/images/blog/author-011.jpg"

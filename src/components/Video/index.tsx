@@ -37,8 +37,8 @@ const Video = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             {/* Video Box */}
-            <div className="mx-auto h-auto max-h-[70vh] overflow-hidden rounded-3xl border border-gray-300 shadow-[0_0_20px_rgba(211,211,211,0.6)] transition-all duration-300">
-              <div className="relative aspect-[77/40]">
+            <div className="mx-auto h-[70vh] max-h-[70vh] overflow-hidden rounded-3xl border border-gray-300 shadow-[0_0_20px_rgba(211,211,211,0.6)] transition-all duration-300">
+              <div className="relative aspect-[77/40] h-full w-full">
                 <video
                   src="/images/video/myvideo.mp4"
                   autoPlay
@@ -59,8 +59,8 @@ const Video = () => {
             >
               {[
                 { value: "200+", label: "Premium Retail Outlets", delay: "delay-100" },
-                { value: "10M+", label: "Daily Impressions", delay: "delay-300" },
-                { value: "3+", label: "Major Cities", delay: "delay-500" },
+                { value: "10M+", label: "Daily Impressions", delay: "delay-100" },
+                { value: "3+", label: "Major Cities", delay: "delay-100" },
               ].map((stat, index) => {
                 const animationClass = hasEntered
                   ? `opacity-100 translate-y-0 scale-100 ${stat.delay}`

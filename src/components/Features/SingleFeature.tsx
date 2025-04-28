@@ -30,7 +30,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         <motion.div
           whileHover={{ rotate: 8 }}
           transition={{ type: "spring", stiffness: 300 }}
-          className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#a31d1d1a] text-[#a31d1d]"
+          className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#F2F5FF] text-[#a31d1d]"
         >
           {icon}
         </motion.div>

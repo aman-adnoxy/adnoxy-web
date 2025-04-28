@@ -60,7 +60,7 @@ const Contact = () => {
       name="message"
       rows={5}
       placeholder="Enter your Message"
-      className="border-stroke w-full resize-none rounded-full border bg-[#f8f8f8] px-9 py-2 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
+      className="border-stroke w-full resize-none rounded-3xl border bg-[#f8f8f8] px-9 py-2 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
     ></textarea>
   </div>
 </div>
