@@ -21,7 +21,7 @@ const AboutSectionTwo = () => {
   return (
     <section className="relative bg-white">
       {/* Background Image Container */}
-      <div className="relative w-full h-[90vh] rounded-3xl overflow-hidden">
+      <div className="relative mx-8 h-[85vh] max-h-[80vh] overflow-hidden rounded-3xl overflow-hidden">
         {/* Background Image */}
         <img
           src="/images/about/image2.png"
@@ -73,7 +73,7 @@ const AboutSectionTwo = () => {
             {features.map((item, index) => (
               <div
                 key={index}
-                className={`bg-white bg-opacity-90 rounded-full shadow-md px-4 py-2 flex items-center gap-2 transition-all duration-700 transform ${
+                className={`bg-white w-fit bg-opacity-90 rounded-full shadow-md px-4 py-2 flex items-center gap-2 transition-all duration-700 transform ${
                   animate ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
                 }`}
                 style={{ transitionDelay: `${100 + index * 80}ms` }}
@@ -101,15 +101,15 @@ const AboutSectionTwo = () => {
         </div>
 
         {/* Why Choose Us — Desktop Only (Overlay Bottom) */}
-        <div className="hidden lg:block absolute bottom-6 left-4 lg:left-12 z-10 w-full max-w-md">
+        <div className="absolute top-auto my-4 inset-0 flex items-center justify-start lg:justify-start pl-4 lg:pl-12 z-10">
           <div
-            className={`bg-white bg-opacity-90 rounded-3xl shadow-lg px-6 py-4 lg:px-8 lg:py-6 text-left transition-all duration-1000 delay-300 transform ${
-              animate ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+            className={`bg-white w-[75vw] bg-opacity-90 rounded-3xl shadow-lg px-6 py-4 lg:px-8 lg:py-6 text-left max-w-md transition-all duration-1000 delay-300 transform ${
+              animate ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
             <h2 className="text-2xl lg:text-3xl font-bold text-black mb-2">Why Choose Us</h2>
             <p className="text-gray-700 mb-4">
-              Discover why we're your top choice for Fashion Advertisements
+              Discover why we're your top choice for Offline Advertisements
             </p>
             <button className="bg-black text-white px-6 py-2 rounded-3xl text-sm hover:bg-gray-500 transition">
               Get Started
@@ -119,7 +119,7 @@ const AboutSectionTwo = () => {
       </div>
 
       {/* Why Choose Us — Mobile (Below image) */}
-      <div className="block lg:hidden mt-6 px-4 transition-all duration-1000 delay-300">
+      {/* <div className="block lg:hidden mt-6 px-4 transition-all duration-1000 delay-300">
         <div
           className={`bg-white bg-opacity-90 rounded-3xl shadow-lg px-6 py-4 text-left transform ${
             animate ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
@@ -133,7 +133,7 @@ const AboutSectionTwo = () => {
             Get Started
           </button>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

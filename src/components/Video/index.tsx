@@ -37,8 +37,8 @@ const Video = () => {
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             {/* Video Box */}
-            <div className="mx-auto h-auto max-h-[70vh] overflow-hidden rounded-3xl border border-gray-300 shadow-[0_0_20px_rgba(211,211,211,0.6)] transition-all duration-300">
-              <div className="relative aspect-[77/40]">
+            <div className="mx-auto h-[70vh] max-h-[70vh] overflow-hidden rounded-3xl border border-gray-300 shadow-[0_0_20px_rgba(211,211,211,0.6)] transition-all duration-300">
+              <div className="relative aspect-[77/40] h-full w-full">
                 <video
                   src="/images/video/myvideo.mp4"
                   autoPlay
