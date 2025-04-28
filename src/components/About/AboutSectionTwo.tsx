@@ -1,73 +1,141 @@
+"use client";
 
-
-import Image from "next/image"; // Ensure Image is imported correctly
+import { useEffect, useState } from "react";
 
 const AboutSectionTwo = () => {
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
+
+  const features = [
+    "Get Performance Metrics",
+    "Local Market Penetration",
+    "Collaborative Partnerships",
+    "Competitive Advantage",
+    "Flexible Plans",
+    "Enhanced Brand Visibility",
+  ];
+
   return (
-    <section className="py-16 md:py-20 lg:py-28">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap items-center">
-          {/* Left Side Image */}
-          <div className="w-full px-4 lg:w-1/2">
-            <div className="relative mx-auto mb-12 max-w-[500px] text-center lg:m-0" data-wow-delay=".15s">
-              <div className="relative mx-auto max-w-[500px] lg:mr-0">
-                <Image
-                  src="/images/about/image2.png"
-                  alt="about-image"
-                  width={500} // Adjusts according to text size
-                  height={450} // Maintains aspect ratio
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0 object-cover"
-                  priority
-                />
-                <Image
-                  src="/images/about/image2.png"
-                  alt="about image"
-                  width={500}
-                  height={450}
-                  className="hidden drop-shadow-three dark:block dark:drop-shadow-none object-cover"
-                  priority
-                />
+    <section className="relative bg-white">
+      {/* Background Image Container */}
+      <div className="relative mx-8 h-[85vh] max-h-[80vh] overflow-hidden rounded-3xl overflow-hidden">
+        {/* Background Image */}
+        <img
+          src="/images/about/image2.png"
+          alt="About Image"
+          className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out transform ${
+            animate ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          }`}
+        />
+
+        {/* Feature Tags — Desktop (Right) & Mobile (Top inside image) */}
+        <div
+          className={`absolute inset-0 z-10 flex flex-col gap-3 px-4 pt-6 lg:pt-0 lg:pr-10 lg:items-end ${
+            animate ? "opacity-100" : "opacity-0"
+          } transition-opacity duration-1000`}
+        >
+          {/* Desktop — Right-aligned */}
+          <div className="hidden lg:flex flex-col items-end justify-center gap-4 w-full h-full">
+            {features.map((item, index) => (
+              <div
+                key={index}
+                className={`bg-white rounded-full shadow-xl px-4 py-2 flex items-center gap-2 transition-all duration-700 transform ${
+                  animate ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
+                }`}
+                style={{ transitionDelay: `${200 + index * 100}ms` }}
+              >
+                <h3 className="text-sm font-semibold text-black m-0">{item}</h3>
+                <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-700 transition">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-4 h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
 
-          {/* Right Side Text Content */}
-          <div className="w-full px-4 lg:w-1/2">
-            <div className="max-w-[470px]">
-              {/* Campaign Strategy */}
-              <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Campaign Strategy & Execution
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  We create and execute tailored campaigns to showcase your brand in the right retail spaces.
-                </p>
+          {/* Mobile — Top inside image */}
+          <div className="block lg:hidden space-y-3">
+            {features.map((item, index) => (
+              <div
+                key={index}
+                className={`bg-white w-fit bg-opacity-90 rounded-full shadow-md px-4 py-2 flex items-center gap-2 transition-all duration-700 transform ${
+                  animate ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
+                }`}
+                style={{ transitionDelay: `${100 + index * 80}ms` }}
+              >
+                <h3 className="text-sm font-semibold text-black m-0">{item}</h3>
+                <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-700 transition">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-4 h-4"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M7 17L17 7M7 7h10v10"
+                    />
+                  </svg>
+                </div>
               </div>
-              {/* Sampling & Product Trials */}
-              <div className="mb-9">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Sampling & Product Trials
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Engage customers by offering samples in partner stores, allowing them to experience your brand firsthand and build connections.
-                </p>
-              </div>
-              {/* Shelf Space Rental */}
-              <div className="mb-1">
-                <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                  Shelf Space Rental
-                </h3>
-                <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Secure premium shelf space in strategically selected retail stores that align with your target audience and price point, ensuring maximum product visibility.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
+        </div>
 
+        {/* Why Choose Us — Desktop Only (Overlay Bottom) */}
+        <div className="absolute top-auto my-4 inset-0 flex items-center justify-start lg:justify-start pl-4 lg:pl-12 z-10">
+          <div
+            className={`bg-white w-[75vw] bg-opacity-90 rounded-3xl shadow-lg px-6 py-4 lg:px-8 lg:py-6 text-left max-w-md transition-all duration-1000 delay-300 transform ${
+              animate ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+            }`}
+          >
+            <h2 className="text-2xl lg:text-3xl font-bold text-black mb-2">Why Choose Us</h2>
+            <p className="text-gray-700 mb-4">
+              Discover why we're your top choice for Offline Advertisements
+            </p>
+            <button className="bg-black text-white px-6 py-2 rounded-3xl text-sm hover:bg-gray-500 transition">
+              Get Started
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Why Choose Us — Mobile (Below image) */}
+      {/* <div className="block lg:hidden mt-6 px-4 transition-all duration-1000 delay-300">
+        <div
+          className={`bg-white bg-opacity-90 rounded-3xl shadow-lg px-6 py-4 text-left transform ${
+            animate ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+          }`}
+        >
+          <h2 className="text-2xl font-bold text-black mb-2">Why Choose Us</h2>
+          <p className="text-gray-700 mb-4">
+            Discover why we're your top choice for Fashion Advertisements
+          </p>
+          <button className="bg-black text-white px-6 py-2 rounded-3xl text-sm hover:bg-gray-500 transition">
+            Get Started
+          </button>
+        </div>
+      </div> */}
     </section>
   );
 };
-export default AboutSectionTwo;
 
+export default AboutSectionTwo;

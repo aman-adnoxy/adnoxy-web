@@ -19,7 +19,17 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
   }
 
   return (
-   
+    <div className="testimonial">
+      <div className="testimonial-header">
+        <Image src={image} alt={name} width={50} height={50} className="testimonial-image" />
+        <div>
+          <h3 className="testimonial-name">{name}</h3>
+          <p className="testimonial-designation">{designation}</p>
+        </div>
+      </div>
+      <div className="testimonial-rating">{ratingIcons}</div>
+      <p className="testimonial-content">{content}</p>
+    </div>
   );
 };
 
