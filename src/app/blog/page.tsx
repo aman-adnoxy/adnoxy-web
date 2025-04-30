@@ -19,7 +19,7 @@ const Blog = () => {
         description="Explore in-depth articles, expert tips, and the latest industry trends to help you make the most of our SaaS solutions and stay ahead in your field."
       />
 </div>
-      <section className="pb-[120px] pt-[120px]">
+      <section className="pt-10">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             {blogData.map((blog) => (

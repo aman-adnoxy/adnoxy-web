@@ -19,7 +19,7 @@ const AboutSectionTwo = () => {
   ];
 
   return (
-    <section className="relative bg-white">
+    <section id="whychooseus" className="relative bg-white pt-16">
       {/* Background Image Container */}
       <div className="relative mx-8 h-[85vh] max-h-[80vh] overflow-hidden rounded-3xl overflow-hidden">
         {/* Background Image */}

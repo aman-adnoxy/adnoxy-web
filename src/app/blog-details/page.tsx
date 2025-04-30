@@ -19,9 +19,7 @@ const BlogDetailsPage = () => {
             <div className="w-full px-4 lg:w-8/12">
               <div>
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-[#a31d1d] dark:text-[#a31d1d] sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight" style={{ fontFamily: 'Plus Jakarta Sans' }}>
-                  <a href="/services/advertising" className="hover:underline">
                     Experience the Future of Advertising – Partner with Us Today!
-                  </a>
                 </h2>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10 font-['Poppins']">
                   <div className="flex flex-wrap items-center">
