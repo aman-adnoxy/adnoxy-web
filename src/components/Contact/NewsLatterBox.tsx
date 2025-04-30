@@ -6,12 +6,12 @@ const NewsLatterBox = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="relative z-10 rounded-2xl bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
-      <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
+    <div className="relative z-10 rounded-3xl bg-white p-8 shadow-three dark:bg-gray-dark sm:p-11 lg:p-8 xl:p-11">
+      <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white" style={{ fontFamily: 'Plus Jakarta Sans' }}>
       Subscribe for exclusive updates
       </h3>
-      <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-      We Craft engaging campaigns that captivate and inspire.
+      <p className="pb-5 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25 font-['Poppins']">
+      We craft engaging campaigns that captivate and inspire.
       </p>
       <div>
         <input
@@ -35,11 +35,11 @@ const NewsLatterBox = () => {
 
 
         <p className="text-center text-base leading-relaxed text-body-color dark:text-body-color-dark">
-          No spam guaranteed, So please don’t send any spam mail.
+          No spam guaranteed.
         </p>
       </div>
 
-      <div>
+      {/* <div>
         <span className="absolute left-2 top-7">
           <svg
             width="57"
@@ -254,7 +254,7 @@ const NewsLatterBox = () => {
             </defs>
           </svg>
         </span>
-      </div>
+      </div> */}
     </div>
   );
 };
