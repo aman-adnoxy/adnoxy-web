@@ -18,7 +18,7 @@ const BlogDetailsPage = () => {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <h2 className="mb-5 text-3xl font-bold leading-tight text-[#a31d1d] dark:text-[#a31d1d] sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight" style={{ fontFamily: 'Plus Jakarta Sans' }}>
+                <h2 className="mb-5 text-3xl font-bold leading-tight text-[#a31d1d] sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight" style={{ fontFamily: 'Plus Jakarta Sans' }}>
                     Experience the Future of Advertising – Partner with Us Today!
                 </h2>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10 font-['Poppins']">
@@ -163,7 +163,7 @@ const BlogDetailsPage = () => {
                           d="M33.3654 85.0768C24.1476 98.7862 1.19876 106.079 -9.12343 108.011L-38.876 22.9988L100.816 -25.8905C100.959 -23.8126 99.8798 -15.5499 94.4164 0.87754C87.5871 21.4119 61.9822 26.677 49.5641 38.7512C37.146 50.8253 44.8877 67.9401 33.3654 85.0768Z"
                           fill="url(#paint1_linear_111:606)"
                         />
-                        <defs>
+                        {/* <defs>
                           <linearGradient
                             id="paint0_linear_111:606"
                             x1="94.7523"
@@ -282,7 +282,7 @@ const BlogDetailsPage = () => {
                             <stop stopOpacity="0.47" />
                             <stop offset="1" stopOpacity="0" />
                           </radialGradient>
-                        </defs>
+                        </defs> */}
                       </svg>
                     </span>
                   </div>

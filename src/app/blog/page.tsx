@@ -1,8 +1,8 @@
 import SingleBlog from "@/components/Blog/SingleBlog";
-import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 import { Metadata } from "next";
+import { getAllPosts } from "../lib/posts";
 
 export const metadata: Metadata = {
   title: "Blog Page | ",
@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 const Blog = () => {
+  const posts = getAllPosts();
   return (
     <>
     
@@ -18,16 +19,16 @@ const Blog = () => {
         pageName="Blogs"
         description="Explore in-depth articles, expert tips, and the latest industry trends to help you make the most of our SaaS solutions and stay ahead in your field."
       />
-</div>
-      <section className="pt-10">
+    </div>
+      <section className="pb-[120px] pt-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
-            {blogData.map((blog) => (
+            {posts.map((post) => (
               <div
-                key={blog.id}
+                key={post.id}
                 className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
               >
-                <SingleBlog blog={blog} />
+                <SingleBlog post={post} />
               </div>
             ))}
           </div>

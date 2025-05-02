@@ -14,9 +14,7 @@ const blogData: Blog[] = [
       designation: "",
     },
     tags: ["Fashion"],
-    
-
-
+    path: "../app/blog-details/omni-channel-blog.tsx",
     publishDate: "Feb 22, 2025",
     
   },
@@ -32,6 +30,7 @@ const blogData: Blog[] = [
       designation: "",
     },
     tags: ["Technology"],
+    path: "../app/blog-details/omni-channel-blog.tsx",
     publishDate: "Jan 25, 2025",
   },
   {
@@ -46,6 +45,7 @@ const blogData: Blog[] = [
       designation: "",
     },
     tags: ["Marketing"],
+    path: "../app/blog-details/omni-channel-blog.tsx",
     publishDate: "Jan 10, 2025",
   },
   
