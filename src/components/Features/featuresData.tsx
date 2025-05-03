@@ -18,7 +18,7 @@ const featuresData: Feature[] = [
   },
   
   {
-    id: 1,
+    id: 2,
     icon: (
       <svg width="38" height="38" viewBox="0 0 40 40" className="fill-current text-black">
         <circle cx="20" cy="20" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
@@ -36,7 +36,7 @@ const featuresData: Feature[] = [
   }
   ,
   {
-    id: 1,
+    id: 3,
     icon: (
       <svg width="40" height="40" viewBox="0 0 40 40" className="fill-current text-black">
         <path d="M5 30 C10 35, 20 35, 25 30" stroke="currentColor" strokeWidth="2" fill="none"/>
@@ -54,7 +54,7 @@ const featuresData: Feature[] = [
       "Engage customers by offering samples in partner stores, allowing them to experience your brand firsthand and build connections.",
   },
   {
-    id: 1,
+    id: 4,
     icon: (
       <svg width="30" height="30" viewBox="0 0 40 42" className="fill-current text-black">
         <rect x="5" y="5" width="30" height="5" stroke="currentColor" strokeWidth="2" fill="none"/>
@@ -78,11 +78,6 @@ const featuresData: Feature[] = [
     paragraph:
       "Secure premium shelf space in strategically selected retail stores that align with your target audience and price point, ensuring maximum product visibility.",
   },  
-  
-
- 
-  
-  
 ];
 
 

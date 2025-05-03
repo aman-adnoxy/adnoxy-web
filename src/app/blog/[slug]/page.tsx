@@ -32,6 +32,7 @@ export default async function Page({ params }) {
                               src={post.authorImage}
                               alt="author"
                               fill
+                              style={{objectFit: "cover"}}
                             />
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 ---
-id: 2
+id: 3
 slug: 'neuromarketing'
 title: 'Neuromarketing: The Psychology Behind Effective Advertising'
 publishedAt: '2025-03-01'
