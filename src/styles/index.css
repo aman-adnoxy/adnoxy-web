@@ -46,3 +46,214 @@
     @apply opacity-100;
   }
 }
+
+/* Custom Markdown Styles */
+.markdown-content {
+  color: #333;
+}
+
+.markdown-content h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  font-family: 'PlusJakartaSans', sans-serif;
+}
+
+.markdown-content h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: 1.75rem 0 0.75rem;
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-weight: bolder;
+
+}
+
+/* Markdown H3 Styling */
+.markdown-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  line-height: 1.4;
+  color: #333;
+  position: relative;
+  font-family: 'Inter', 'Inter Fallback', sans-serif;
+  font-weight: bold;
+}
+
+/* Decorative underline */
+.markdown-content h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 2px;
+  background: #d4a373; /* Matching accent color */
+  transition: width 0.3s ease;
+}
+
+/* Hover effect */
+.markdown-content h3:hover::after {
+  width: 5rem;
+}
+
+/* Numbered H3 variant (for sections) */
+.markdown-content h3.numbered {
+  counter-increment: section-counter;
+  padding-left: 2.5rem;
+}
+
+.markdown-content h3.numbered::before {
+  content: counter(section-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d4a373;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* With small caps subtitle */
+.markdown-content h3.subtitled {
+  margin-bottom: 0.2rem;
+}
+
+.markdown-content h3 + .subtitle {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b7b7a4;
+  margin-bottom: 1rem;
+}
+
+.markdown-content p {
+  margin: 1rem 0;
+  font-size: 18px;
+  color: #636363;
+  font-weight: 500;
+  line-height: 1.6rem;
+}
+
+.markdown-content img {
+  border-radius: 24px;
+  margin: 2rem 0;
+}
+
+.markdown-content a {
+  color: #a31d1d;
+  transition: color 0.2s;
+}
+
+.markdown-content a:hover {
+  text-decoration: underline;
+}
+
+/* Markdown List Styling */
+.markdown-content ul,
+.markdown-content ol {
+  margin: 1rem 0;
+  padding-left: 1.8rem;
+}
+
+/* Unordered lists (bullet points) */
+.markdown-content ul {
+  list-style-type: none;
+}
+
+.markdown-content ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.4rem;
+  font-size: 18px;
+  color: #636363;
+  font-weight: 500;
+}
+
+.markdown-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #d4a373; /* Warm accent color */
+  font-size: 1.2em;
+}
+
+/* Ordered lists (numbered) */
+.markdown-content ol {
+  list-style-type: none;
+  counter-reset: custom-counter;
+}
+
+.markdown-content ol li {
+  counter-increment: custom-counter;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.markdown-content ol li::before {
+  content: counter(custom-counter);
+  position: absolute;
+  left: 0;
+  background: #f8edeb; /* Soft background */
+  color: #d4a373; /* Matching accent */
+  font-weight: 600;
+  font-size: 0.85em;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1px;
+}
+
+/* Nested lists */
+.markdown-content ul ul,
+.markdown-content ol ol {
+  margin: 0.5rem 0 0.5rem 1.5rem;
+}
+
+.markdown-content ul ul li::before {
+  content: "○";
+  color: #b7b7a4; /* Secondary accent */
+}
+
+/* Hover effects */
+.markdown-content ul li:hover::before {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+.markdown-content ol li:hover::before {
+  background: #d4a373;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+/* Task lists (for markdown with [ ] or [x]) */
+.markdown-content ul.contains-task-list {
+  padding-left: 0;
+}
+
+.markdown-content .task-list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.markdown-content .task-list-item input {
+  accent-color: #d4a373;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid #ddd;
+  padding-left: 1rem;
+  color: #636363;
+  font-style: italic;
+  margin: 1.5rem 0;
+}

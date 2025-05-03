@@ -6,19 +6,26 @@ import SectionTitle from "../Common/SectionTitle";
 const Video = () => {
   const statsRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [hasEntered, setHasEntered] = useState(false); // bounce trigger
+  const [hasEntered, setHasEntered] = useState(false);
+  const [isClient, setIsClient] = useState(false); // Track client-side
 
   useEffect(() => {
+    setIsClient(true); // Set to true when component mounts on client
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return; // Only run on client
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !hasEntered) {
           setIsVisible(true);
           setTimeout(() => {
-            setIsVisible(false); // animate out
+            setIsVisible(false);
             setTimeout(() => {
-              setHasEntered(true); // animate back in
-            }, 200); // small delay
-          }, 100); // start exit motion
+              setHasEntered(true);
+            }, 200);
+          }, 100);
         }
       },
       { threshold: 0.3 }
@@ -27,28 +34,45 @@ const Video = () => {
     if (statsRef.current) {
       observer.observe(statsRef.current);
     }
-  }, [hasEntered]);
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, [hasEntered, isClient]);
+
+  // Don't render video on server to prevent hydration mismatch
+  const renderVideo = () => {
+    if (!isClient) return null;
+    
+    return (
+      <video
+        src="/images/video/myvideo.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full h-full object-cover"
+      >
+        Your browser does not support the video tag.
+      </video>
+    );
+  };
 
   return (
     <section className="relative z-10 py-16">
       <div className="container">
-      <h2 className="text-[2rem] lg:text-[3rem] md:text-[2.5rem] sm:text-[2rem] font-extrabold text-center text-black mb-10" style={{ fontFamily: 'Plus Jakarta Sans' }}>Your Brand's Best Story, Told Boldly.</h2>
+        <h2 className="text-[2rem] lg:text-[3rem] md:text-[2.5rem] sm:text-[2rem] font-extrabold text-center text-black mb-10" style={{ fontFamily: 'Plus Jakarta Sans' }}>
+          Your Brand's Best Story, Told Boldly.
+        </h2>
 
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             {/* Video Box */}
             <div className="mx-auto h-[70vh] max-h-[70vh] overflow-hidden rounded-3xl border border-gray-300 shadow-[0_0_20px_rgba(211,211,211,0.6)] transition-all duration-300">
               <div className="relative aspect-[77/40] h-full w-full">
-                <video
-                  src="/images/video/myvideo.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover rounded-md"
-                >
-                  Your browser does not support the video tag.
-                </video>
+                {renderVideo()}
               </div>
             </div>
 
@@ -87,6 +111,3 @@ const Video = () => {
 };
 
 export default Video;
-
-
-
