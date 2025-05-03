@@ -1,19 +1,14 @@
-import { getAllPosts } from "@/app/lib/posts";
+import { getAllPosts, getPost } from "@/app/lib/posts";
 import { notFound } from "next/navigation";
 import MarkdownIt from "markdown-it";
 import Image from "next/image";
 
 const md = new MarkdownIt();
 
-async function fetchPost(slug: string) {
-  const posts = getAllPosts();
-  return posts.find((post) => post.slug === slug);
-}
-
-export default async function PostPage({ params }) {
-  const post = await fetchPost(params.slug);
-
-    if (!post) notFound();
+export default async function Page({ params }) {
+  
+  const post = await getPost(params.slug);
+  if (!post) notFound();
 
   const htmlConverter = md.render(post.content);
 
@@ -27,7 +22,7 @@ export default async function PostPage({ params }) {
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-[#a31d1d] sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight" style={{ fontFamily: 'Plus Jakarta Sans' }}>
                 {post.title}
                 </h2>
-                <div className="mb-2 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10 font-['Poppins']">
+                <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10 font-['Poppins']">
                   <div className="flex flex-wrap items-center">
                     <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
@@ -67,7 +62,9 @@ export default async function PostPage({ params }) {
                             <path d="M13.2637 3.3697H7.64754V2.58105C8.19721 2.43765 8.62738 1.91189 8.62738 1.31442C8.62738 0.597464 8.02992 0 7.28906 0C6.54821 0 5.95074 0.597464 5.95074 1.31442C5.95074 1.91189 6.35702 2.41376 6.93058 2.58105V3.3697H1.31442C0.597464 3.3697 0 3.96716 0 4.68412V13.2637C0 13.9807 0.597464 14.5781 1.31442 14.5781H13.2637C13.9807 14.5781 14.5781 13.9807 14.5781 13.2637V4.68412C14.5781 3.96716 13.9807 3.3697 13.2637 3.3697ZM6.6677 1.31442C6.6677 0.979841 6.93058 0.716957 7.28906 0.716957C7.62364 0.716957 7.91042 0.979841 7.91042 1.31442C7.91042 1.649 7.64754 1.91189 7.28906 1.91189C6.95448 1.91189 6.6677 1.6251 6.6677 1.31442ZM1.31442 4.08665H13.2637C13.5983 4.08665 13.8612 4.34954 13.8612 4.68412V6.45261H0.716957V4.68412C0.716957 4.34954 0.979841 4.08665 1.31442 4.08665ZM13.2637 13.8612H1.31442C0.979841 13.8612 0.716957 13.5983 0.716957 13.2637V7.16957H13.8612V13.2637C13.8612 13.5983 13.5983 13.8612 13.2637 13.8612Z" />
                           </svg>
                         </span>
-                        {post.date}
+                        <time dateTime={post.publishedAt} className="mr-4">
+                          {new Date(post.publishedAt).toLocaleDateString()}
+                        </time>
                       </p>
                     </div>
                   </div>
@@ -76,21 +73,33 @@ export default async function PostPage({ params }) {
                       href="/category/fashion"
                       className="flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-[#a31d1d] transition hover:bg-[#a31d1d] hover:text-white"
                     >
-                      {post.categories}
+                      {post.tags[0]}
                     </a>
                   </div>
                 </div>
 
-                <article className="markdown-content mx-auto max-w-3xl py-8 px-4 font-['Poppins']">
-                    <div dangerouslySetInnerHTML={{ __html: htmlConverter }} />
-                </article>
+      
+      <article className="markdown-content mx-auto max-w-3xl py-8 px-4 font-['Inter'] text-base font-medium leading-relaxed text-gray-500 sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+        <div dangerouslySetInnerHTML={{ __html: htmlConverter }} />
+      </article>
 
-                  {/* <div className="mb-10 w-full overflow-hidden rounded">
-                    <a href="/gallery/fashion-events">
-                      <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                      </div>
-                    </a>
-                  </div> */}
+      {/* <section className="mt-12">
+        <h2 className="text-2xl font-semibold mb-4">Related Articles</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {post.relatedPosts.map(related => (
+            <Link 
+              key={related.slug} 
+              href={`/blog/${related.slug}`}
+              className="group block hover:bg-gray-50 p-4 rounded-lg transition"
+            >
+              <h3 className="text-xl font-medium group-hover:text-[#a31d1d] transition">
+                {related.title}
+              </h3>
+              <p className="text-gray-600 mt-2">{related.excerpt}</p>
+            </Link>
+          ))}
+        </div>
+      </section> */}
               </div>
             </div>
           </div>
@@ -99,9 +108,3 @@ export default async function PostPage({ params }) {
     </>
   );
 }
-
-  {/* <article className="max-w-2xl mx-auto p-4">
-        <h1> {post.title} </h1>
-        <p> {post.date} </p>
-      <div dangerouslySetInnerHTML={{ __html: htmlConverter }} />
-    </article> */}

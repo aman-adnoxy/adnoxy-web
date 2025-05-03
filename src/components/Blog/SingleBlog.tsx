@@ -13,11 +13,13 @@ const SingleBlog = ({ post }: { post: Blog }) => {
           className="relative block aspect-[37/22] w-full rounded-lg"
         >
           <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-gray-300 px-4 py-2 text-sm font-semibold capitalize text-black hover:bg-white">
-            {post.categories}
+            {post.tags[0]}
           </span>
+          <div>
           <Image src={post.coverImage} alt="image" fill className="rounded-lg hover:scale-105 transition-all duration-500" style={{objectFit: "cover"}}/>
+          </div>
         </Link>
-        <p className="text-xs text-body-color px-4 pt-4 text-sm font-[Poppins]">{post.date}</p>
+        <p className="text-xs text-body-color px-4 pt-4 text-sm font-[Poppins]"><time dateTime={post.publishedAt} className="mr-4">{new Date(post.publishedAt).toLocaleDateString()}</time></p>
         <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-6 2xl:p-6">
           <h3>
             <Link
