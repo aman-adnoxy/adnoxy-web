@@ -1,7 +1,8 @@
-import SingleBlog from "@/components/Blog/SingleBlog";
+// app/blog/page.tsx
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { getAllPosts } from "../lib/posts";
 import Link from 'next/link';
+import LazyBlogList from "@/components/Blog/LazyBlogList.client";
 
 export const metadata = {
   title: "Blog Page | ADNOXY",
@@ -59,15 +60,12 @@ export default async function BlogPage({ searchParams }: Props) {
 
       <section className="py-16">
         <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
-            {visiblePosts.map((post) => (
-              <div
-                key={post.id}
-                className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3"
-              >
-                <SingleBlog post={post} />
-              </div>
-            ))}
+          <div className="-mx-4 flex flex-wrap justify-flex-start gap-y-5">
+            <LazyBlogList 
+              posts={visiblePosts} 
+              currentPage={currentPage}
+              totalPages={totalPages}
+            />
           </div>
 
           {totalPages > 1 && (
@@ -80,6 +78,7 @@ export default async function BlogPage({ searchParams }: Props) {
                       className={`flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-[#a31d1d] transition hover:bg-[#a31d1d] hover:text-white ${
                         currentPage === 1 ? 'pointer-events-none opacity-50' : ''
                       }`}
+                      prefetch={currentPage > 1} // Prefetch previous page if not first
                     >
                       Prev
                     </Link>
@@ -99,6 +98,7 @@ export default async function BlogPage({ searchParams }: Props) {
                               ? 'bg-[#a31d1d] text-white'
                               : 'bg-body-color bg-opacity-[15%] text-[#a31d1d] hover:bg-[#a31d1d] hover:text-white'
                           }`}
+                          prefetch={Math.abs(Number(page) - currentPage) <= 2} // Prefetch nearby pages
                         >
                           {page}
                         </Link>
@@ -112,6 +112,7 @@ export default async function BlogPage({ searchParams }: Props) {
                       className={`flex h-9 min-w-[36px] items-center justify-center rounded-md bg-body-color bg-opacity-[15%] px-4 text-sm text-[#a31d1d] transition hover:bg-[#a31d1d] hover:text-white ${
                         currentPage === totalPages ? 'pointer-events-none opacity-50' : ''
                       }`}
+                      prefetch={currentPage < totalPages} // Always prefetch next page
                     >
                       Next
                     </Link>

@@ -45,11 +45,25 @@ const Hero = () => {
                 }`}
               >
                 <Link
-                  href="https://forms.gle/zW4584QMNMkerPREA"
-                  className="inline-block rounded-full bg-[#a31d1d] px-6 py-2 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#a31d1d] hover:scale-105 transform transition"
-                >
-                  Get Started
-                </Link>
+                    href="https://forms.gle/zW4584QMNMkerPREA"
+                      className="inline-flex items-center justify-center rounded-3xl bg-[#a31d1d] px-6 py-3 text-base font-semibold text-white duration-300 ease-in-out hover:bg-[#a31d1d] hover:scale-105 transform transition"
+                    >
+                    Get Started
+                    <svg
+                        className="ml-2 h-5 w-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        ></path>
+                      </svg>
+               </Link>
               </div>
             </div>
 

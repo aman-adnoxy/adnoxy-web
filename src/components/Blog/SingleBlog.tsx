@@ -3,7 +3,13 @@ import { getAllPosts } from "@/app/lib/posts";
 import Image from "next/image";
 import Link from "next/link";
 
-const SingleBlog = ({ post }: { post: Blog }) => {
+export default function SingleBlog({ 
+  post,
+  priority = false 
+}: { 
+  post: Blog;
+  priority?: boolean;
+}) {
 
   return (
     <>
@@ -16,7 +22,7 @@ const SingleBlog = ({ post }: { post: Blog }) => {
             {post.tags[0]}
           </span>
           <div>
-          <Image src={post.coverImage} alt="image" fill className="rounded-lg hover:scale-105 transition-all duration-500" style={{objectFit: "cover"}}/>
+          <Image src={post.coverImage} alt="image" fill priority={priority} className="rounded-lg hover:scale-105 transition-all duration-500 " style={{objectFit: "cover"}}/>
           </div>
         </Link>
         <p className="text-xs text-body-color px-4 pt-4 text-sm font-[Poppins]"><time dateTime={post.publishedAt} className="mr-4">{new Date(post.publishedAt).toLocaleDateString()}</time></p>
@@ -60,6 +66,3 @@ const SingleBlog = ({ post }: { post: Blog }) => {
   );
 };
 
-
-
-export default SingleBlog;

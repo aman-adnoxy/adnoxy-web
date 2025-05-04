@@ -2,12 +2,14 @@ import { getAllPosts, getPost } from "@/app/lib/posts";
 import { notFound } from "next/navigation";
 import MarkdownIt from "markdown-it";
 import Image from "next/image";
+import RelatedBlogs from "@/components/Blog/RelatedPost";
 
 const md = new MarkdownIt();
 
 export default async function Page({ params }) {
   
   const post = await getPost(params.slug);
+  const allPosts = getAllPosts();
   if (!post) notFound();
 
   const htmlConverter = md.render(post.content);
@@ -22,7 +24,7 @@ export default async function Page({ params }) {
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-[#a31d1d] sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight" style={{ fontFamily: 'Plus Jakarta Sans' }}>
                 {post.title}
                 </h2>
-                <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10 font-['Poppins']">
+                <div className="mb-auto flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10 font-['Poppins']">
                   <div className="flex flex-wrap items-center">
                     <div className="mb-5 mr-10 flex items-center">
                       <div className="mr-4">
@@ -84,23 +86,14 @@ export default async function Page({ params }) {
         <div dangerouslySetInnerHTML={{ __html: htmlConverter }} />
       </article>
 
-      {/* <section className="mt-12">
-        <h2 className="text-2xl font-semibold mb-4">Related Articles</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {post.relatedPosts.map(related => (
-            <Link 
-              key={related.slug} 
-              href={`/blog/${related.slug}`}
-              className="group block hover:bg-gray-50 p-4 rounded-lg transition"
-            >
-              <h3 className="text-xl font-medium group-hover:text-[#a31d1d] transition">
-                {related.title}
-              </h3>
-              <p className="text-gray-600 mt-2">{related.excerpt}</p>
-            </Link>
-          ))}
+      <section className="mt-12">
+        <div>
+          <RelatedBlogs 
+            currentPostId={post.id} 
+            allPosts={allPosts} 
+          />
         </div>
-      </section> */}
+      </section>
               </div>
             </div>
           </div>
