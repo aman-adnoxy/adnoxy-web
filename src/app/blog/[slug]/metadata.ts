@@ -17,6 +17,9 @@ export async function generateMetadata(
   return {
     title: post.title,
     description: post.excerpt || post.content.slice(0, 150),
+    alternates: {
+      canonical: `https://www.adnoxy.com/blog/${params.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt || post.content.slice(0, 150),

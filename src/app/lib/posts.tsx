@@ -21,6 +21,24 @@ function parseDate(dateString?: string): string {
   }
 }
 
+export function validateAllPosts() {
+  const posts = getAllPosts();
+  const slugs = posts.map(post => post.slug);
+  const uniqueSlugs = new Set(slugs);
+  
+  if (slugs.length !== uniqueSlugs.size) {
+    console.error('Duplicate slugs found!');
+  }
+  
+  return posts.map(post => ({
+    slug: post.slug,
+    valid: fs.existsSync(path.join(postsDirectory, `${post.slug}.md`))
+  }));
+}
+
+// Run during build
+validateAllPosts();
+
 // Shared parsing logic
 function parseMarkdownFile(fileName: string): Blog {
   const slug = fileName.replace(/\.md$/, '');

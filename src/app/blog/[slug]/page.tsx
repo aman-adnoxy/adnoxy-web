@@ -6,6 +6,13 @@ import RelatedBlogs from "@/components/Blog/RelatedPost";
 
 const md = new MarkdownIt();
 
+export async function generateStaticParams() {
+  const posts = getAllPosts();
+  return posts.map(post => ({ slug: post.slug }));
+}
+
+export const dynamicParams = false; 
+
 export default async function Page({ params }) {
   
   const post = await getPost(params.slug);
