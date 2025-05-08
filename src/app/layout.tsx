@@ -7,6 +7,7 @@ import "../styles/index.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+
 export const metadata: Metadata = {
   title: {
     default: 'ADNOXY | Innovating Offline Ads',
@@ -78,7 +79,9 @@ export default function RootLayout({
       </body>
     </html>
   );
+  
 }
+
 
 import { Providers } from "./providers";import { Metadata } from "next";
 

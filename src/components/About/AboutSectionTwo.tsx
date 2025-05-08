@@ -6,7 +6,10 @@ const AboutSectionTwo = () => {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    setAnimate(true);
+    const timeout = setTimeout(() => {
+      setAnimate(true);
+    }, 100); // slight delay to trigger animations
+    return () => clearTimeout(timeout);
   }, []);
 
   const features = [
@@ -20,8 +23,7 @@ const AboutSectionTwo = () => {
 
   return (
     <section id="whychooseus" className="relative bg-white pt-16">
-      {/* Background Image Container */}
-      <div className="relative mx-8 h-[85vh] max-h-[80vh] overflow-hidden rounded-3xl overflow-hidden">
+      <div className="relative mx-8 h-[85vh] max-h-[80vh] overflow-hidden rounded-3xl">
         {/* Background Image */}
         <img
           src="/images/about/image2.png"
@@ -31,21 +33,26 @@ const AboutSectionTwo = () => {
           }`}
         />
 
-        {/* Feature Tags — Desktop (Right) & Mobile (Top inside image) */}
+        {/* Feature Tags Container */}
         <div
-          className={`absolute inset-0 z-10 flex flex-col gap-3 px-4 pt-6 lg:pt-0 lg:pr-10 lg:items-end ${
+          className={`absolute inset-0 z-10 flex flex-col gap-3 px-4 pt-6 lg:pt-0 lg:pr-10 lg:items-end transition-opacity duration-1000 ${
             animate ? "opacity-100" : "opacity-0"
-          } transition-opacity duration-1000`}
+          }`}
         >
-          {/* Desktop — Right-aligned */}
+          {/* Desktop Features */}
           <div className="hidden lg:flex flex-col items-end justify-center gap-4 w-full h-full">
             {features.map((item, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-full shadow-xl px-4 py-2 flex items-center gap-2 transition-all duration-700 transform ${
-                  animate ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
+                className={`bg-white rounded-full shadow-xl px-4 py-2 flex items-center gap-2 transition-all transform ${
+                  animate
+                    ? "translate-x-0 opacity-100"
+                    : "translate-x-10 opacity-0"
                 }`}
-                style={{ transitionDelay: `${200 + index * 100}ms` }}
+                style={{
+                  transitionDelay: `${200 + index * 100}ms`,
+                  transitionDuration: "700ms",
+                }}
               >
                 <h3 className="text-sm font-semibold text-black m-0">{item}</h3>
                 <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-700 transition">
@@ -68,15 +75,20 @@ const AboutSectionTwo = () => {
             ))}
           </div>
 
-          {/* Mobile — Top inside image */}
+          {/* Mobile Features */}
           <div className="block lg:hidden space-y-3">
             {features.map((item, index) => (
               <div
                 key={index}
-                className={`bg-white w-fit bg-opacity-90 rounded-full shadow-md px-4 py-2 flex items-center gap-2 transition-all duration-700 transform ${
-                  animate ? "translate-y-0 opacity-100" : "-translate-y-3 opacity-0"
+                className={`bg-white w-fit bg-opacity-90 rounded-full shadow-md px-4 py-2 flex items-center gap-2 transition-all transform ${
+                  animate
+                    ? "translate-y-0 opacity-100"
+                    : "-translate-y-3 opacity-0"
                 }`}
-                style={{ transitionDelay: `${100 + index * 80}ms` }}
+                style={{
+                  transitionDelay: `${100 + index * 80}ms`,
+                  transitionDuration: "700ms",
+                }}
               >
                 <h3 className="text-sm font-semibold text-black m-0">{item}</h3>
                 <div className="w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-700 transition">
@@ -100,14 +112,16 @@ const AboutSectionTwo = () => {
           </div>
         </div>
 
-        {/* Why Choose Us — Desktop Only (Overlay Bottom) */}
-        <div className="absolute top-auto my-4 inset-0 flex items-center justify-start lg:justify-start pl-4 lg:pl-12 z-10">
+        {/* Why Choose Us (Desktop) */}
+        <div className="absolute inset-0 flex items-end justify-start lg:justify-start pl-4 lg:pl-12 z-10 pb-6">
           <div
             className={`bg-white w-[75vw] bg-opacity-90 rounded-3xl shadow-lg px-6 py-4 lg:px-8 lg:py-6 text-left max-w-md transition-all duration-1000 delay-300 transform ${
               animate ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
-            <h2 className="text-2xl lg:text-3xl font-bold text-black mb-2">Why Choose Us</h2>
+            <h2 className="text-2xl lg:text-3xl font-bold text-black mb-2">
+              Why Choose Us
+            </h2>
             <p className="text-gray-700 mb-4">
               Discover why we're your top choice for Offline Advertisements
             </p>
@@ -117,23 +131,6 @@ const AboutSectionTwo = () => {
           </div>
         </div>
       </div>
-
-      {/* Why Choose Us — Mobile (Below image) */}
-      {/* <div className="block lg:hidden mt-6 px-4 transition-all duration-1000 delay-300">
-        <div
-          className={`bg-white bg-opacity-90 rounded-3xl shadow-lg px-6 py-4 text-left transform ${
-            animate ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-          }`}
-        >
-          <h2 className="text-2xl font-bold text-black mb-2">Why Choose Us</h2>
-          <p className="text-gray-700 mb-4">
-            Discover why we're your top choice for Fashion Advertisements
-          </p>
-          <button className="bg-black text-white px-6 py-2 rounded-3xl text-sm hover:bg-gray-500 transition">
-            Get Started
-          </button>
-        </div>
-      </div> */}
     </section>
   );
 };

@@ -41,8 +41,8 @@ const Footer = () => {
   className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
 >
   <svg
-    width="17"
-    height="16"
+    width="37"
+    height="22"
     viewBox="0 0 17 16"
     className="fill-current"
   >
@@ -60,7 +60,7 @@ const Footer = () => {
 >
   <svg
     width="37"
-    height="20"
+    height="22"
     viewBox="0 0 17 16"
     fill="currentColor"
     className="fill-current"
@@ -151,21 +151,23 @@ const Footer = () => {
                 </h2>
                 <ul>
                   <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-red-600 dark:text-body-color-dark dark:hover:text-red-600"
- >
-                      TOS
-                    </Link>
+                  <Link
+  href="/tos"
+  className="mb-4 inline-block text-base text-body-color duration-300 hover:text-red-600 dark:text-body-color-dark dark:hover:text-red-600"
+>
+  TOS
+</Link>
+
                   </li>
                   <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-red-600 dark:text-body-color-dark dark:hover:text-red-600"
-                      >
-                      Privacy Policy
-                    </Link>
-                  </li>
+  <Link
+    href="/privacy-policy"
+    className="mb-4 inline-block text-base text-body-color duration-300 hover:text-red-600 dark:text-body-color-dark dark:hover:text-red-600"
+  >
+    Privacy Policy
+  </Link>
+</li>
+
                  
                 </ul>
               </div>
@@ -186,14 +188,15 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link
-                      href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-red-600 dark:text-body-color-dark dark:hover:text-red-600"
-                      >
-                      Terms of Use
-                    </Link>
-                  </li>
-                  git
+  <Link
+    href="/terms-of-use"
+    className="mb-4 inline-block text-base text-body-color duration-300 hover:text-red-600 dark:text-body-color-dark dark:hover:text-red-600"
+  >
+    Terms of Use
+  </Link>
+</li>
+
+                  
                 </ul>
               </div>
             </div>

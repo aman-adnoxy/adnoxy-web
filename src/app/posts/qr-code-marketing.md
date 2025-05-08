@@ -1,25 +1,25 @@
 ---
-id: 2
-slug: 'How Brands Are Winning Beyond Digital'
+id: 4
+slug: 'qr-code-marketing.md'
 title: 'Innovating Offline Ads and More: Bridging the Physical and Digital Worlds'
 publishedAt: '2025-04-02'
 updatedAt: '2025-05-02'
 author: 'Naman'
 authorImage: '/images/blog/author-02.jpg'
 excerpt: 'Discover how brands are blending traditional offline ads with modern technology to create powerful, trackable, and engaging experiences.'
-coverImage: '/images/blog/QR code marketing.jpg'
+coverImage: '/images/blog/qr-code-marketing.jpg'
 tags: ['Marketing Innovation']
 readingTime: 5
 status: 'published'
 metadata:
   keywords: ['offline advertising', 'QR code marketing', 'AR ads', 'phygital marketing',' hybrid ads',' experiential marketing']
-  ogImage: '/images/og/QR code marketing.jpg'
+  ogImage: '/images/blog/qr-code-marketing.jpg'
   canonicalUrl: 'https://www.adnoxy.com/blog/QRcodemarketing'
 ---
 
 
 
-![QR code marketing](/images/blog/color-theory.png)
+![QR code marketing](/images/blog/qr-code-marketing.jpg)
 
 
 ## Introduction
