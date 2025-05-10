@@ -12,11 +12,9 @@ import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
 
-
 export const metadata: Metadata = {
-  title: " ADNOXY",
+  title: "ADNOXY",
   description: "This is Home for ADNOXY",
-  // other metadata
 };
 
 export default function Home() {
@@ -26,14 +24,14 @@ export default function Home() {
       <Hero />
       <Features />
       <Video />
-      <Brands />
-      <FAQSection />
-      <AboutSectionOne />
+      {/* <Brands /> */}
       <AboutSectionTwo />
+      <FAQSection />
       {/* <Testimonials /> */}
-      <Pricing />
+      {/* <Pricing /> */}
       <Blog />
       <Contact />
     </>
   );
 }
+

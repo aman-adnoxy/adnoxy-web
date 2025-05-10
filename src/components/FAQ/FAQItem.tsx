@@ -1,5 +1,6 @@
 // src/components/FAQItem.tsx
-
+// src/components/FAQItem.tsx
+// components/FAQItem.tsx
 import React, { useState } from 'react';
 
 interface FAQItemProps {
@@ -13,15 +14,22 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
   const toggleAnswer = () => setIsOpen(!isOpen);
 
   return (
-    <div className="faq-item mb-4 border-b border-gray-300 pb-4">
-      <div 
+    <div className="faq-item mb-1 px-4 py-2">
+      <div
         onClick={toggleAnswer}
-        className="cursor-pointer text-xl font-semibold text-black hover:text-primary dark:text-white dark:hover:text-primary"
+        className="cursor-pointer flex my-2 items-center justify-between text-md font-medium text-black hover:text-gray-600 w-full"
       >
-        {question}
+        <span>{question}</span>
+        <span
+          className={`transform transition-transform text-xs font-semibold ${
+            isOpen ? 'rotate-180' : 'rotate-0'
+          }`}
+        >
+          ▼
+        </span>
       </div>
       {isOpen && (
-        <div className="mt-2 text-base text-gray-700 dark:text-gray-400">
+        <div className="mt-2 mb-2 text-sm dark:text-gray-400">
           {answer}
         </div>
       )}
@@ -30,3 +38,10 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
 };
 
 export default FAQItem;
+
+
+
+
+
+
+
