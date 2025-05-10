@@ -26,6 +26,11 @@ const menuData: Menu[] = [
     newTab: false,
   },
 
-  
+  {
+    id: 4,
+    title: "Events",
+    path: "/events",
+    newTab: false,
+  },
 ];
 export default menuData;
