@@ -3,7 +3,9 @@
 import React, { useEffect, useState } from "react";
 import { Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
+// Define your events outside the component
 const events = [
   {
     id: 1,
@@ -29,7 +31,7 @@ const events = [
   },
 ];
 
-export default function EventsSection() {
+const EventsSection = () => {
   const [fadeIn, setFadeIn] = useState(false);
 
   useEffect(() => {
@@ -65,10 +67,12 @@ export default function EventsSection() {
               <div className="flex flex-col gap-4">
                 {/* Image */}
                 <div className="w-full h-40 overflow-hidden rounded-lg">
-                  <img
+                  <Image
                     src={event.image}
                     alt={event.title}
-                    className="w-full h-full object-cover rounded-lg"
+                    width={600}
+                    height={400}
+                    className="object-cover"
                   />
                 </div>
 
@@ -84,9 +88,7 @@ export default function EventsSection() {
                   <p className="text-sm text-gray-800 mb-3">{event.description}</p>
 
                   <div className="text-sm text-gray-700">
-                    <h4 className="font-semibold mb-1 text-pink-600">
-                      More Details:
-                    </h4>
+                    <h4 className="font-semibold mb-1 text-pink-600">More Details:</h4>
                     <p>{event.detailedDescription}</p>
                   </div>
                 </div>
@@ -97,7 +99,8 @@ export default function EventsSection() {
       </div>
     </section>
   );
-}
+};
 
+export default EventsSection;
 
 

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
@@ -58,11 +59,15 @@ const Hero = () => {
                 animate ? "opacity-100 scale-100" : "opacity-0 scale-95"
               }`}
             >
-              <img
-                src="/images/about/image.png"
-                alt="about-image"
-                className="aspect-[4/5] h-[40vh] hidden xl:flex max-w-[400px] sm:max-w-[450px] md:max-w-[450px] lg:max-w-[460px] object-cover drop-shadow-three rounded-3xl"
-              />
+              <div className="relative aspect-[4/5] h-[40vh] hidden xl:flex max-w-[460px]">
+                <Image
+                  src="/images/about/image.png"
+                  alt="about-image"
+                  fill
+                  className="object-cover drop-shadow-three rounded-3xl"
+                  priority
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -73,11 +78,15 @@ const Hero = () => {
             animate ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
         >
-          <img
-            src="/images/hero/sale.jpg"
-            alt="hero-image"
-            className="aspect-[77/78] xl:aspect-[4/5] lg:aspect-[4/5] sm:aspect-[4/5] h-[40vh] xl:h-[75vh] lg:h-[60vh] md:h-[50vh] sm:h-[50vh] max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[600px] object-cover drop-shadow-three rounded-3xl"
-          />
+          <div className="relative aspect-[77/78] xl:aspect-[4/5] lg:aspect-[4/5] sm:aspect-[4/5] h-[40vh] xl:h-[75vh] lg:h-[60vh] md:h-[50vh] sm:h-[50vh] max-w-[600px]">
+            <Image
+              src="/images/hero/sale.jpg"
+              alt="hero-image"
+              fill
+              className="object-cover drop-shadow-three rounded-3xl"
+              priority
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -85,3 +94,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

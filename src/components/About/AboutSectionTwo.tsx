@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image"; // ✅ Import Next.js Image component
 
 const AboutSectionTwo = () => {
   const [animate, setAnimate] = useState(false);
@@ -8,7 +9,7 @@ const AboutSectionTwo = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setAnimate(true);
-    }, 100); // slight delay to trigger animations
+    }, 100);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -24,13 +25,16 @@ const AboutSectionTwo = () => {
   return (
     <section id="whychooseus" className="relative bg-white pt-16">
       <div className="relative mx-8 h-[85vh] max-h-[80vh] overflow-hidden rounded-3xl">
-        {/* Background Image */}
-        <img
+        {/* ✅ Background Image with next/image */}
+        <Image
           src="/images/about/image2.png"
           alt="About Image"
-          className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-out transform ${
+          fill
+          priority
+          className={`absolute inset-0 object-cover transition-all duration-1000 ease-out transform ${
             animate ? "opacity-100 scale-100" : "opacity-0 scale-95"
           }`}
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
 
         {/* Feature Tags Container */}
@@ -112,7 +116,7 @@ const AboutSectionTwo = () => {
           </div>
         </div>
 
-        {/* Why Choose Us (Desktop) */}
+        {/* Why Choose Us Box */}
         <div className="absolute inset-0 flex items-end justify-start lg:justify-start pl-4 lg:pl-12 z-10 pb-6">
           <div
             className={`bg-white w-[75vw] bg-opacity-90 rounded-3xl shadow-lg px-6 py-4 lg:px-8 lg:py-6 text-left max-w-md transition-all duration-1000 delay-300 transform ${
