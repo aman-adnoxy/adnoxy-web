@@ -30,3 +30,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+  
+
+  RESEND_API_KEY=your_actual_key_here

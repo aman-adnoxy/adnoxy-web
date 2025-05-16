@@ -10,13 +10,12 @@ import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
+import Events from "@/components/Events/EventsSection";
 import { Metadata } from "next";
 
-
 export const metadata: Metadata = {
-  title: " ADNOXY",
+  title: "ADNOXY",
   description: "This is Home for ADNOXY",
-  // other metadata
 };
 
 export default function Home() {
@@ -25,15 +24,18 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
+      <Events />
       <Video />
-      <Brands />
-      <FAQSection />
-      <AboutSectionOne />
+      {/* <Brands /> */}
       <AboutSectionTwo />
+      <FAQSection />
       {/* <Testimonials /> */}
-      <Pricing />
+      {/* <Pricing /> */}
+
       <Blog />
+      
       <Contact />
     </>
   );
 }
+

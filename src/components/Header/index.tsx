@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <>
    <header
-  className={`header left-0 top-0 z-40 flex w-full items-center ${
+  className={`header left-0 top-0 z-40 flex w-full font-[Poppins] items-center ${
     sticky
       ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
       : "absolute bg-transparent"
@@ -162,12 +162,7 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-              <Link
-  href="/signin"
-  className="hidden px-7 py-3 text-base font-medium text-gray-500 hover:text-[#a31d1d] dark:text-gray-500 dark:hover:text-[#a31d1d] md:block"
->
-  Sign In
-</Link>
+              
                 {/* <div>
                   <ThemeToggler />
                 </div> */}
