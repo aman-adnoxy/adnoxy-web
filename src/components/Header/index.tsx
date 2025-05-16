@@ -162,12 +162,7 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-              <Link
-  href="/signin"
-  className="hidden px-7 py-3 text-base font-medium text-gray-500 hover:text-[#a31d1d] dark:text-gray-500 dark:hover:text-[#a31d1d] md:block"
->
-  Sign In
-</Link>
+              
                 {/* <div>
                   <ThemeToggler />
                 </div> */}
